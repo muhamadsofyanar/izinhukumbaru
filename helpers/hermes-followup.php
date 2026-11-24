@@ -122,7 +122,7 @@ function processHermesFollowupJobs(int $limit = 20, ?callable $sender = null): a
             $ph = ['name' => $row['user_name'], 'product_name' => (string) $product->fetchColumn(),
                    'total' => formatRupiah((float) $row['total']), 'order_number' => $row['order_number'],
                    'checkout_url' => rtrim(APP_URL, '/') . '/transactions/' . $row['order_number'],
-                   'app_name' => getSetting('app_name', 'STIFIn Mulia')];
+                   'app_name' => getSetting('app_name', 'Izin Hukum')];
             $subject = renderPlaceholders($template['subject'] ?? '', $ph, 'email');
             $body = renderPlaceholders($template['body'] ?? '', $ph, 'email');
             if (function_exists('emailLayout')) $body = emailLayout($subject, $body, 'info');

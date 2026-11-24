@@ -572,7 +572,7 @@ $saveBtn  = 'px-5 py-2 rounded-lg text-sm font-semibold text-white bg-brand hove
                 // kebenaran yang ikut ditimpa saat update sistem — BUKAN dari
                 // settings.app_version yang bisa basi.
                 $sysInfo = [
-                    'Versi Averion'  => APP_VERSION,
+                    'Versi Izin Hukum'  => APP_VERSION,
                     'Versi PHP'      => PHP_VERSION,
                     'Platform'       => PHP_OS,
                     'Server'         => $_SERVER['SERVER_SOFTWARE'] ?? '-',
@@ -623,7 +623,7 @@ $saveBtn  = 'px-5 py-2 rounded-lg text-sm font-semibold text-white bg-brand hove
                 <div class="flex items-center justify-between gap-3 flex-wrap mb-1">
                   <div class="flex items-center gap-2">
                     <span class="text-[10px] px-1.5 py-0.5 rounded-md bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 font-semibold">Disarankan</span>
-                    <span class="text-sm font-semibold text-gray-900 dark:text-white">Proses Otomatis Averion</span>
+                    <span class="text-sm font-semibold text-gray-900 dark:text-white">Proses Otomatis Izin Hukum</span>
                   </div>
                   <span class="text-[11px] text-gray-400 dark:text-gray-600 font-mono">*/5 * * * * · Tiap 5 menit</span>
                 </div>

@@ -507,15 +507,6 @@ if (staffCan('users')) {
         'params' => [],
     ];
 }
-if (staffCan('content')) {
-    $operations[] = [
-        'label' => 'Kajian mendatang yang sudah terbit',
-        'url' => '/admin/kajian?status=published&when=upcoming',
-        'query' => "SELECT COUNT(*) FROM darmutiara_kajian
-            WHERE published = 1 AND starts_at >= ? AND LOWER(title) NOT LIKE '[demo]%'",
-        'params' => [date('Y-m-d H:i:s')],
-    ];
-}
 foreach ($operations as &$operation) {
     $operation['count'] = null;
     try {
@@ -576,17 +567,7 @@ $typeBadge = function(string $type): string {
 
       <section class="dmi-hero mb-6" aria-labelledby="admin-darmutiara-heading">
         <div>
-          <h2 id="admin-darmutiara-heading">Kantor Virtual Cabang</h2>
-          <?php if (staffCan('content')): ?>
-          <p>Kelola kegiatan, promotor, peserta tes, voucher dan transaksi cabang.</p>
-          <?php endif; ?>
-        </div>
-        <?php if (isAdmin()): ?>
-        <a class="dmi-cta" href="<?= e(APP_URL) ?>/admin/kantor-cabang">Buka Kantor Cabang <span aria-hidden="true">→</span></a>
-        <?php elseif (staffCan('content')): ?>
-        <a class="dmi-cta" href="<?= e(APP_URL) ?>/admin/kajian">Kelola Kajian <span aria-hidden="true">→</span></a>
-        <?php endif; ?>
-      </section>
+          <h2 id="admin-darmutiara-heading">Dashboard Izin Hukum</h2></div><a class="dmi-cta" href="<?= e(APP_URL) ?>/layanan">Lihat layanan</a></section>
 
       <?php if ($operations): ?>
       <section class="mb-6" aria-labelledby="admin-operations-heading">
@@ -690,13 +671,13 @@ $typeBadge = function(string $type): string {
                   <polyline points="22 4 12 14.01 9 11.01"/>
                 </svg>
               </span>
-              <h3 class="text-sm font-bold text-gray-900 dark:text-white">Panduan Penyiapan Averion</h3>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-white">Panduan Penyiapan Izin Hukum</h3>
               <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
                 <?= $completedCount ?>/<?= $totalSteps ?> Selesai (<?= $progressPct ?>%)
               </span>
             </div>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
-              Yang perlu diatur di awal oleh pengguna untuk penggunaan AVERION adalah sebagai berikut:
+              Yang perlu diatur di awal oleh pengguna untuk penggunaan Izin Hukum adalah sebagai berikut:
             </p>
           </div>
 

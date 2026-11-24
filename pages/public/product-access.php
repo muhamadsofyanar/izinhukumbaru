@@ -70,7 +70,7 @@ if (!$authed && $_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$appName    = getSetting('app_name', 'STIFIn Mulia');
+$appName    = getSetting('app_name', 'Izin Hukum');
 $brandColor = getSetting('brand_color', '#6366f1');
 $appFavicon = trim((string) getSetting('app_favicon', ''));
 $faviconSvg = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23" . ltrim($brandColor, '#') . "'/><path d='M16 7 L25 25 L7 25 Z' fill='white'/></svg>";

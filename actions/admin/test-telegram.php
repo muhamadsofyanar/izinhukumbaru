@@ -35,7 +35,7 @@ try {
     // Konstruktor tanpa argumen → baca telegram_bot_token tersimpan (sama dgn test-wa).
     $adapter = new TelegramAdapter();
 
-    $appName = getSetting('app_name', defined('APP_NAME') ? APP_NAME : 'STIFIn Mulia');
+    $appName = getSetting('app_name', defined('APP_NAME') ? APP_NAME : 'Izin Hukum');
     $message = "\xE2\x9C\x85 Test Telegram dari " . $appName . "\n"
              . "Konfigurasi bot berhasil. Notifikasi internal siap. \xF0\x9F\x9A\x80\n"
              . "Waktu: " . date('d M Y, H:i') . " WIB";

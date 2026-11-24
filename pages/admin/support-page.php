@@ -202,8 +202,8 @@ $cardCls  = 'bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:bo
 
             <div>
               <label class="<?= $labelCls ?>">Judul halaman</label>
-              <input type="text" name="support_headline" value="<?= e($g('support_headline', '')) ?>" maxlength="120" class="<?= $inputCls ?>" placeholder="Dukung karya <?= e(getSetting('app_name', 'STIFIn Mulia')) ?>">
-              <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Judul besar di halaman. Kosong = &ldquo;Dukung karya <?= e(getSetting('app_name', 'STIFIn Mulia')) ?>&rdquo;.</p>
+              <input type="text" name="support_headline" value="<?= e($g('support_headline', '')) ?>" maxlength="120" class="<?= $inputCls ?>" placeholder="Dukung karya <?= e(getSetting('app_name', 'Izin Hukum')) ?>">
+              <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Judul besar di halaman. Kosong = &ldquo;Dukung karya <?= e(getSetting('app_name', 'Izin Hukum')) ?>&rdquo;.</p>
             </div>
 
             <div>

@@ -45,7 +45,7 @@ if ($to === '') {
 }
 
 if ($message === '') {
-    $appName = getSetting('app_name', defined('APP_NAME') ? APP_NAME : 'STIFIn Mulia');
+    $appName = getSetting('app_name', defined('APP_NAME') ? APP_NAME : 'Izin Hukum');
     $message = 'Test WhatsApp dari ' . $appName . '. Jika kamu menerima pesan ini, konfigurasi sudah benar. ✅';
 }
 

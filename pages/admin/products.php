@@ -1071,7 +1071,7 @@ generateCSRF();
                 <!-- none -->
                 <label class="flex items-start gap-2.5 px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 cursor-pointer hover:bg-white dark:hover:bg-gray-800 transition">
                   <input type="radio" name="lp_type" value="none" class="lp-type-radio mt-0.5 w-4 h-4 text-[var(--brand-color)] border-gray-300 dark:border-gray-600 focus:ring-[var(--brand-color)]">
-                  <span class="text-sm text-gray-700 dark:text-gray-300">Tidak ada <span class="text-gray-400 dark:text-gray-600">— tampilkan halaman produk Averion</span></span>
+                  <span class="text-sm text-gray-700 dark:text-gray-300">Tidak ada <span class="text-gray-400 dark:text-gray-600">— tampilkan halaman produk Izin Hukum</span></span>
                 </label>
 
                 <!-- canvas -->
@@ -1182,7 +1182,7 @@ generateCSRF();
               <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Isi Paket <span class="font-normal text-gray-400 dark:text-gray-600">(untuk produk non-kelas — 1 item per baris)</span></label>
               <textarea name="includes" id="productIncludes" rows="4"
                         class="w-full px-3 py-2 rounded-lg text-sm border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-[var(--brand-color)] focus:border-transparent outline-none transition resize-y"
-                        placeholder="Contoh:&#10;Averion — Business Operating System (langganan 1 tahun)&#10;FormPay — Premium White Label License (lifetime)&#10;Sellix — Premium White Label License (lifetime)"></textarea>
+                        placeholder="Contoh:&#10;Izin Hukum — Business Operating System (langganan 1 tahun)&#10;FormPay — Premium White Label License (lifetime)&#10;Sellix — Premium White Label License (lifetime)"></textarea>
               <p class="text-[11px] text-gray-400 dark:text-gray-500 mt-1">Tampil sebagai section "Isi Paket" di landing (menggantikan Kurikulum untuk produk non-kelas). Kosongkan untuk menyembunyikan.</p>
             </div>
             <div>

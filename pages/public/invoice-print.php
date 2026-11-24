@@ -35,7 +35,7 @@ $payStmt->execute([(int) $order['id']]);
 $payment = $payStmt->fetch() ?: [];
 
 $seller = [
-    'name'    => getSetting('invoice_seller_name', '') ?: getSetting('app_name', 'STIFIn Mulia'),
+    'name'    => getSetting('invoice_seller_name', '') ?: getSetting('app_name', 'Izin Hukum'),
     'address' => getSetting('invoice_seller_address', ''),
     'city'    => getSetting('invoice_seller_city', ''),
     'phone'   => getSetting('invoice_seller_phone', ''),

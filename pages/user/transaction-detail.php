@@ -394,7 +394,7 @@ $statusConfig = match ($order['status']) {
             .then(function (r) { return r.json(); })
             .then(function (d) {
               if (d.success && d.payment_url) {
-                // Tetap di Averion: gateway dibuka di tab baru, halaman ini
+                // Tetap di Izin Hukum: gateway dibuka di tab baru, halaman ini
                 // memantau status live (auto-poll) sampai pelunasan terkonfirmasi.
                 var a = document.createElement('a');
                 a.href = d.payment_url; a.target = '_blank'; a.rel = 'noopener';
@@ -418,7 +418,7 @@ $statusConfig = match ($order['status']) {
           }
           </script>
           <?php elseif ($isHostedGw): ?>
-          <!-- Order pending Duitku/Xendit: buyer tetap di Averion — bayar via tab
+          <!-- Order pending Duitku/Xendit: buyer tetap di Izin Hukum — bayar via tab
                baru, halaman ini memantau status live & berubah sendiri saat lunas. -->
           <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-5 mb-4">
             <div class="flex items-center gap-2.5 mb-1.5">

@@ -97,12 +97,12 @@ try {
       <section class="dmi-hero mb-6" aria-labelledby="member-darmutiara-heading">
         <div>
           <h2 id="member-darmutiara-heading">Assalamu’alaikum, <?= e(explode(' ', $_SESSION['name'] ?? 'Anggota')[0]) ?></h2>
-          <p>Lihat jadwal, daftar kajian, dan ikuti diskusi bersama anggota.</p>
+          <p>Lihat paket layanan dan persyaratan dokumen.</p>
           <?php if ($memberLevel): ?>
           <p>Keanggotaan <?= e($memberLevel['name']) ?></p>
           <?php endif; ?>
         </div>
-        <a class="dmi-cta" href="<?= e(APP_URL) ?>/kajian">Lihat Jadwal Kajian <span aria-hidden="true">→</span></a>
+        <a class="dmi-cta" href="<?= e(APP_URL) ?>/layanan">Lihat layanan <span aria-hidden="true">→</span></a>
       </section>
 
       <!-- Stat Cards -->

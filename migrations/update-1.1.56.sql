@@ -1,8 +1,8 @@
 -- Averion v1.1.56 migrasi
 -- Seragamkan skema product_upsells: fresh install v1.1.54-1.1.55 mendapat 2
--- FOREIGN KEY dari stifin-install.sql yang tidak pernah ada di migrasi update-1.1.54
+-- FOREIGN KEY dari izinhukum-install.sql yang tidak pernah ada di migrasi update-1.1.54
 -- (client upgrade tidak memilikinya). FK dihapus agar semua instalasi identik.
--- stifin-install.sql v1.1.56 juga sudah tanpa FK.
+-- izinhukum-install.sql v1.1.56 juga sudah tanpa FK.
 -- Pola drop KONDISIONAL via information_schema + PREPARE: tiap statement
 -- sukses di instalasi manapun (dengan/tanpa FK), aman untuk runner lama yang
 -- tidak menoleransi error, dan portabel MariaDB / MySQL 8.

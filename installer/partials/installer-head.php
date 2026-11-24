@@ -13,14 +13,14 @@ if (!function_exists('getSetting')) {
     function getSetting(string $key, ?string $default = null): ?string
     {
         $defaults = [
-            'app_name'    => 'STIFIn Mulia',
+            'app_name'    => 'Izin Hukum',
             'brand_color' => '#043F2B',
         ];
         return $defaults[$key] ?? $default;
     }
 }
 
-$_appName    = getSetting('app_name', 'STIFIn Mulia');
+$_appName    = getSetting('app_name', 'Izin Hukum');
 $_brand      = getSetting('brand_color', '#043F2B');
 $_initials   = strtoupper(substr($_appName, 0, 1));
 $_totalSteps = 4;

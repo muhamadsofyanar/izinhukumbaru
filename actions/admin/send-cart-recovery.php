@@ -34,7 +34,7 @@ if (!$template) { flash('error', 'Template "abandoned_cart" belum aktif. Aktifka
 
 $checkoutUrl = rtrim(APP_URL, '/') . '/transactions/' . $order['order_number'];
 $ph = ['name' => $order['user_name'], 'product_name' => $order['product_name'], 'total' => formatRupiah((float) $order['total']),
-       'order_number' => $order['order_number'], 'checkout_url' => $checkoutUrl, 'app_name' => getSetting('app_name', 'STIFIn Mulia')];
+       'order_number' => $order['order_number'], 'checkout_url' => $checkoutUrl, 'app_name' => getSetting('app_name', 'Izin Hukum')];
 $subject = renderPlaceholders($template['subject'] ?? '', $ph, $channel);
 $body    = renderPlaceholders($template['body'] ?? '', $ph, $channel);
 if ($channel === 'email' && function_exists('emailLayout')) $body = emailLayout($subject, $body, 'info');

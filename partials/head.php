@@ -1,7 +1,7 @@
 <?php
 // Variabel yang bisa diset oleh halaman yang meng-include:
 // $pageTitle (string) — judul tab browser
-$pageTitle       = $pageTitle       ?? getSetting('app_name', 'STIFIn Mulia');
+$pageTitle       = $pageTitle       ?? getSetting('app_name', 'Izin Hukum');
 $brandColor      = getSetting('brand_color', '#043F2B');
 $brandColorLight = getSetting('brand_color_secondary', '#496B59');
 // Dark mode disimpan di cookie (di-set oleh JS) agar server bisa render
@@ -11,7 +11,7 @@ $darkPref = $_COOKIE['averion_dark'] ?? '';
 if ($darkPref === '1')     $darkDefault = 'dark';
 elseif ($darkPref === '0') $darkDefault = '';
 else                       $darkDefault = getSetting('dark_mode_default', '0') === '1' ? 'dark' : '';
-$appName         = getSetting('app_name', 'STIFIn Mulia');
+$appName         = getSetting('app_name', 'Izin Hukum');
 $appFavicon      = getSetting('app_favicon', '');
 
 // ── UI Theme / Appearance ──────────────────────────────────────
@@ -98,7 +98,7 @@ $htmlThemeClass = $themeOnPage
   <!-- App CSS -->
   <link rel="stylesheet" href="<?= e(APP_URL) ?>/assets/css/app.css?v=<?= @filemtime(__DIR__ . '/../assets/css/app.css') ?: '1' ?>">
 <?php if ($themeOnPage || !empty($darmutiaraKajianTheme)): ?>
-  <link rel="stylesheet" href="<?= e(APP_URL) ?>/assets/css/stifin.css?v=<?= @filemtime(__DIR__ . '/../assets/css/stifin.css') ?: '1' ?>">
+  <link rel="stylesheet" href="<?= e(APP_URL) ?>/assets/css/izinhukum.css?v=<?= @filemtime(__DIR__ . '/../assets/css/izinhukum.css') ?: '1' ?>">
 <?php endif; ?>
 <?php if (getSetting('pwa_enabled', '1') === '1'): ?>
   <!-- Registrasi service worker PWA (pass-through, tanpa cache) + tangkap event

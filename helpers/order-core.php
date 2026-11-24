@@ -184,9 +184,6 @@ function onOrderPaid(PDO $pdo, array $order, array $opts = []): array
 
     $instant = false; // akses instan saat DP (di-set di cabang booking bila produk mengizinkan)
     if (!$isBooking) {
-        if ((float) ($order['total'] ?? 0) > 0) {
-            stifinQueuePaidVouchers($pdo, $orderId, $userId);
-        }
         // Dime: naikkan counter penjualan main product SEBELUM activateAccess (cek renewal).
         if ($dimeMainId) bumpDimeCounter($pdo, $userId, $dimeMainId);
         foreach ($items as $it) {
@@ -324,14 +321,6 @@ function onOrderPaid(PDO $pdo, array $order, array $opts = []): array
  */
 function onOrderPaidPostCommit(array $order, array $ctx, array $opts = []): void
 {
-    if (!stifinVoucherTransferEnabled() && stifinVoucherProductId() > 0 && empty($ctx['is_booking'])) {
-        try {
-            stifinDistributeVouchers(getDB());
-        } catch (Throwable $error) {
-            error_log('[stifin-voucher] Distribusi tertunda. Jalankan ulang dari panel admin.');
-        }
-    }
-
     $orderNumber = (string) ($order['order_number'] ?? '');
     $user        = $ctx['user'] ?? null;
 

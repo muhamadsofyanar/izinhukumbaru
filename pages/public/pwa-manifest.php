@@ -14,7 +14,7 @@ header('Content-Type: application/manifest+json; charset=utf-8');
 // Manifest boleh di-cache singkat; perubahan branding jarang & ikon pakai cache-bust ?v=.
 header('Cache-Control: public, max-age=3600');
 
-$appName = trim((string) getSetting('app_name', 'STIFIn Mulia')) ?: 'STIFIn Mulia';
+$appName = trim((string) getSetting('app_name', 'Izin Hukum')) ?: 'Izin Hukum';
 $brand   = (string) getSetting('brand_color', '#6366f1');
 if (!preg_match('/^#[0-9a-fA-F]{6}$/', $brand)) {
     $brand = '#6366f1';

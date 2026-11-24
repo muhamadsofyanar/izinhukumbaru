@@ -12,7 +12,7 @@ $renewUrl    = trim((string) getSetting('vendor_renew_url', ''));
 if ($renewUrl === '' || stripos($renewUrl, 'localhost') !== false || stripos($renewUrl, 'averion-license') !== false) {
     $renewUrl = 'https://darmutiara.com';
 }
-$appName     = getSetting('app_name', 'STIFIn Mulia');
+$appName     = getSetting('app_name', 'Izin Hukum');
 
 // Source lisensi: 'direct' (vendor) atau 'agency'. Jika dikelola agency,
 // tampilkan kontak agency, bukan tombol perpanjang/kontak vendor.

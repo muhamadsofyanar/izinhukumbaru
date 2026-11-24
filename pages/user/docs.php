@@ -5,7 +5,7 @@ requireLogin();
 $pageTitle   = 'Panduan';
 $topbarTitle = 'Panduan';
 
-$appName = getSetting('app_name', 'STIFIn Mulia');
+$appName = getSetting('app_name', 'Izin Hukum');
 $uid     = (int) ($_SESSION['user_id'] ?? 0);
 
 // ─── Deteksi fitur aktif → tampilkan hanya section yang relevan (adaptif, white-label) ───

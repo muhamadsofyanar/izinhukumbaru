@@ -142,7 +142,7 @@ $manualPaymentInstruction = getSetting('manual_payment_instruction',
 $manualTransferAvailable  = $manualTransferEnabled && (count($bankAccounts) > 0 || !empty($manualQrImage));
 
 // ─── Settings & harga ─────────────────────────────────────────
-$appName    = getSetting('app_name', 'STIFIn Mulia');
+$appName    = getSetting('app_name', 'Izin Hukum');
 $appLogo    = getSetting('app_logo', '');
 $appFavicon = getSetting('app_favicon', '');
 $brandColor = getSetting('brand_color', '#6366f1');
@@ -1094,7 +1094,7 @@ include __DIR__ . '/../../partials/sp-popup.php'; ?>
 
   // ── Break-out: metode gateway (redirect ke halaman gateway eksternal) harus
   //    membuka di jendela atas; transfer manual/moota tetap di dalam iframe
-  //    (halaman thank-you Averion satu-origin, aman di-iframe). ──
+  //    (halaman thank-you Izin Hukum satu-origin, aman di-iframe). ──
   var BREAKOUT = ['duitku', 'xendit', 'midtrans', 'tripay', 'paypal'];
   function applyTarget() {
     var sel = document.querySelector('input[name="payment_method"]:checked');

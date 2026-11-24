@@ -56,7 +56,7 @@ if (!$order) {
 }
 
 // ─── Settings & branding ──────────────────────────────────────
-$appName    = getSetting('app_name', 'STIFIn Mulia');
+$appName    = getSetting('app_name', 'Izin Hukum');
 $appLogo    = getSetting('app_logo', '');
 $brandColor = getSetting('brand_color', '#6366f1');
 $supportWa  = trim((string) getSetting('vendor_support_whatsapp', ''));

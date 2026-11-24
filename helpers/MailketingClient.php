@@ -47,7 +47,7 @@ class MailketingClient {
         }
 
         $fromName = getSetting('mailketing_from_name', '')
-            ?: getSetting('mailketing_sender_name', getSetting('app_name', 'STIFIn Mulia'));
+            ?: getSetting('mailketing_sender_name', getSetting('app_name', 'Izin Hukum'));
         $fromEmail = getSetting('mailketing_from_email', '')
             ?: getSetting('mailketing_sender_email', 'no-reply@' . ($_SERVER['HTTP_HOST'] ?? 'localhost'));
         $fromEmail = trim((string)$fromEmail);

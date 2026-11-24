@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $configContent .= "\n";
                 $configContent .= "// ─── Aplikasi: APP_URL ────────────────────────────────────────\n";
                 $configContent .= "define('APP_URL', " . var_export(rtrim($appUrl, '/'), true) . ");\n";
-                $configContent .= "define('APP_NAME', 'STIFIn Mulia');\n";
+                $configContent .= "define('APP_NAME', 'Izin Hukum');\n";
                 $configContent .= "// APP_VERSION dibaca dari version.php (di-overwrite otomatis saat update sistem).\n";
                 $configContent .= "require_once DARMUTIARA_ROOT . '/version.php';\n";
                 $configContent .= "\n";

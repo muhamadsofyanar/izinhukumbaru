@@ -35,7 +35,7 @@ $csrf = generateCSRF();
         <div class="mb-5">
           <h2 class="text-xl font-bold text-gray-900 dark:text-white">Integrasi Averion Studio</h2>
           <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
-            Hubungkan instalasi Averion ini dengan Averion Studio — asisten promosi berbasis prompt, bonus gratis untuk member aktif.
+            Hubungkan instalasi Izin Hukum ini dengan Averion Studio — asisten promosi berbasis prompt, bonus gratis untuk member aktif.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ $csrf = generateCSRF();
               <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
                 Studio membantumu membuat materi promosi (broadcast WA, kalender konten, script VSL, ad copy, prompt desain visual) dari data produk di instalasi ini.
                 Buka <a href="https://studio.averion.id" target="_blank" rel="noopener" class="font-medium underline" style="color:var(--brand-color)">studio.averion.id</a>,
-                login pakai email + license key Averion kamu.
+                login pakai email + license key Izin Hukum kamu.
               </p>
               <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
                 Token di bawah dipakai Studio untuk <span class="font-medium text-gray-700 dark:text-gray-300">membaca daftar produk aktif</span> kamu
@@ -109,7 +109,7 @@ $csrf = generateCSRF();
 
           <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
             <p class="text-xs text-gray-400 dark:text-gray-500">
-              Cara pakai: Generate Token → salin → buka Studio &rsaquo; Settings &rsaquo; Koneksi Averion → isi domain
+              Cara pakai: Generate Token → salin → buka Studio &rsaquo; Settings &rsaquo; Koneksi Izin Hukum → isi domain
               <span class="font-mono text-gray-500 dark:text-gray-400"><?= e(parse_url(APP_URL, PHP_URL_HOST) ?: APP_URL) ?></span> + token → Uji Koneksi.
             </p>
           </div>

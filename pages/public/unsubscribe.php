@@ -10,7 +10,7 @@ require_once __DIR__ . '/../../bootstrap.php';
 $token = (string) ($_GET['token'] ?? '');
 $email = unsubscribeVerify($token);
 
-$appName    = getSetting('app_name', 'STIFIn Mulia');
+$appName    = getSetting('app_name', 'Izin Hukum');
 $brandColor = getSetting('brand_color', '#6366f1');
 
 // ─── Token tidak valid ───────────────────────────────────────────

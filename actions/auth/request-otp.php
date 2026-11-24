@@ -106,7 +106,7 @@ try {
         if (!str_contains($otpTpl, '{code}')) $otpTpl = $otpMsgDefault;
         $message = strtr($otpTpl, [
             '{code}'     => $code,
-            '{app_name}' => getSetting('app_name', 'STIFIn Mulia'),
+            '{app_name}' => getSetting('app_name', 'Izin Hukum'),
             '{minutes}'  => '10',
         ]);
         $sendResult = $adapter->send($phone, '', $message);

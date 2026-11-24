@@ -14,7 +14,7 @@ $maskedKey = $key === '' ? 'Belum dipasang' : (strlen($key) > 8 ? substr($key, 0
 $proof = $isDarmutiaraKey && !empty($license['signed_token'])
     ? darmutiaraLicenseClaims((string) $license['signed_token'], $installationDomain)
     : null;
-$appName    = getSetting('app_name', 'STIFIn Mulia');
+$appName    = getSetting('app_name', 'Izin Hukum');
 // Versi mengikuti version.php (APP_VERSION) secara otomatis — bukan setting lama yang statis.
 $appVersion = defined('APP_VERSION') ? APP_VERSION : getSetting('app_version', '1.0.0');
 $renewUrl   = trim((string) getSetting('vendor_renew_url', ''));

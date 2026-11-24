@@ -222,7 +222,7 @@ switch ($rpcMethod) {
             'protocolVersion' => $ver,
             'capabilities'    => ['tools' => (object) []], // tools tanpa listChanged
             'serverInfo'      => [
-                'name'    => (string) getSetting('app_name', 'STIFIn Mulia') . ' — Integrasi Claude',
+                'name'    => (string) getSetting('app_name', 'Izin Hukum') . ' — Integrasi Claude',
                 'version' => defined('APP_VERSION') ? APP_VERSION : '1.0',
             ],
         ]);

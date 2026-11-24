@@ -34,7 +34,7 @@ if ($enabled) {
     } catch (Exception $e) {}
 }
 
-$appName    = getSetting('app_name', 'STIFIn Mulia');
+$appName    = getSetting('app_name', 'Izin Hukum');
 $otpauthUri = $setupSecret !== '' ? totpOtpauthUri($setupSecret, (string) $user['email'], $appName) : '';
 $secretPretty = $setupSecret !== '' ? implode(' ', str_split($setupSecret, 4)) : '';
 

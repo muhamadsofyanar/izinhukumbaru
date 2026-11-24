@@ -206,7 +206,6 @@ if (!function_exists('orderProductNotSellableFree')) {
             && (float) $product['price'] === 0.0
             && in_array($product['slug'] ?? '', [
                 'satu-pesan-beda-cara',
-                'ebook-coba-peran-promotor-stifin',
             ], true);
         return !$freeEbook && !$flexible && (float) ($product['price'] ?? 0) <= 0;
     }

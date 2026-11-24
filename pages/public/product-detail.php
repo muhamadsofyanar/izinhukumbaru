@@ -120,8 +120,8 @@ $pMyr        = ($product['price_myr'] !== null && (float) $product['price_myr'] 
 $plabels     = getProductLabels($product['language'] ?? 'id');
 $userHasAccess = isLoggedIn() && hasAccess((int)($_SESSION['user_id'] ?? 0), (int)$product['id']);
 
-$pageTitle = $product['name'] . ' — ' . getSetting('app_name', 'STIFIn Mulia');
-$appName   = getSetting('app_name', 'STIFIn Mulia');
+$pageTitle = $product['name'] . ' — ' . getSetting('app_name', 'Izin Hukum');
+$appName   = getSetting('app_name', 'Izin Hukum');
 
 $typeBadge = match($product['type']) {
     'class'      => 'bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-400',

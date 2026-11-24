@@ -6,4 +6,4 @@ require_once __DIR__ . '/../../bootstrap.php';
 requireAdmin();
 
 header('Content-Type: application/json');
-echo json_encode(['success' => false, 'message' => 'Pembaruan STIFIn Mulia dipasang melalui GitHub.']);
+echo json_encode(['success' => false, 'message' => 'Pembaruan Izin Hukum dipasang melalui GitHub.']);

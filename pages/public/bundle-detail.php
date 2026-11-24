@@ -59,8 +59,8 @@ if ($manualTransferEnabled) {
 $manualTransferAvailable = $manualTransferEnabled && ($manualBankCount > 0 || !empty($manualQrImage));
 $anyPaidMethod = $duitkuActive || $xenditActive || $mootaActive || $manualTransferAvailable;
 
-$pageTitle = $bundle['name'] . ' — ' . getSetting('app_name', 'STIFIn Mulia');
-$appName   = getSetting('app_name', 'STIFIn Mulia');
+$pageTitle = $bundle['name'] . ' — ' . getSetting('app_name', 'Izin Hukum');
+$appName   = getSetting('app_name', 'Izin Hukum');
 generateCSRF();
 ?>
 <?php include __DIR__ . '/../../partials/head.php'; ?>
@@ -166,7 +166,7 @@ generateCSRF();
                       if (pd.error || !pd.order_id) { showErr(pd.error || 'Gagal membuat order.'); document.querySelectorAll('.bundle-pay').forEach(function(b){ b.disabled=false; }); return; }
                       var cr = await fetch('<?= e(APP_URL) ?>/actions/checkout/create-payment', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:'order_id='+encodeURIComponent(pd.order_id)+'&gateway='+encodeURIComponent(method) });
                       var cd = await cr.json();
-                      // Tetap di Averion: mendarat di halaman transaksi (tombol bayar tab baru + status live).
+                      // Tetap di Izin Hukum: mendarat di halaman transaksi (tombol bayar tab baru + status live).
                       if (cd.success && cd.payment_url) { window.location.href = '<?= e(APP_URL) ?>/transactions/' + encodeURIComponent(cd.order_number || pd.order_number); }
                       else { showErr(cd.message || 'Gagal membuat pembayaran.'); document.querySelectorAll('.bundle-pay').forEach(function(b){ b.disabled=false; }); }
                     } catch(e){ showErr('Terjadi kesalahan.'); document.querySelectorAll('.bundle-pay').forEach(function(b){ b.disabled=false; }); }

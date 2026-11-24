@@ -143,24 +143,6 @@ try {
 $pageTitle   = $product['name'];
 $topbarTitle = $product['name'];
 
-$upcomingKajian = [];
-$kajianTimezone = new DateTimeZone('Asia/Jakarta');
-if (!$previewMode && $ownerType === 'product') {
-    try {
-        $stmt = $pdo->prepare("SELECT id, title, starts_at FROM darmutiara_kajian
-            WHERE product_id = ? AND published = 1 AND starts_at >= ?
-              AND LOWER(title) NOT LIKE '[demo]%'
-            ORDER BY starts_at ASC, id ASC LIMIT 5");
-        $stmt->execute([$productId, (new DateTimeImmutable('now', $kajianTimezone))->format('Y-m-d H:i:s')]);
-        $upcomingKajian = $stmt->fetchAll();
-    } catch (PDOException $error) {
-        // Instalasi lama bisa membuka materi sebelum migrasi Kajian dipasang.
-        if ($error->getCode() !== '42S02') {
-            error_log('Class detail Kajian: ' . $error->getMessage());
-        }
-    }
-}
-
 // Thumbnail bisa tersimpan sebagai path relatif (mis. assets/uploads/...). Jadikan
 // absolut agar tetap tampil di route dalam seperti /member/lm/7 (path relatif akan
 // keliru resolve ke /member/lm/assets/...). URL http(s) penuh dibiarkan apa adanya.
@@ -249,20 +231,7 @@ $iconForType = function(string $type): string {
           <?php endif; ?>
         </div>
 
-        <?php if ($upcomingKajian): ?>
-        <section class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5 mb-5">
-          <h2 class="font-bold text-gray-900 dark:text-white">Kajian Mendatang</h2>
-          <ul class="mt-2 divide-y divide-gray-200 dark:divide-gray-800">
-            <?php foreach ($upcomingKajian as $session): ?>
-            <li class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-2">
-              <a class="font-semibold text-[var(--brand-color)] underline"
-                 href="<?= e(rtrim(APP_URL, '/') . '/kajian?id=' . (int) $session['id']) ?>"><?= e($session['title']) ?></a>
-              <span class="text-sm text-gray-600 dark:text-gray-400"><?= e((new DateTimeImmutable($session['starts_at'], $kajianTimezone))->format('d/m/Y H:i')) ?> WIB</span>
-            </li>
-            <?php endforeach; ?>
-          </ul>
-        </section>
-        <?php endif; ?>
+        
 
         <!-- Category Filter (shown only when multiple categories exist) -->
         <?php

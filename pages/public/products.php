@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../../bootstrap.php';
 
-$pageTitle = getSetting('app_name', 'STIFIn Mulia') . ' — Produk';
+$pageTitle = getSetting('app_name', 'Izin Hukum') . ' — Produk';
 
 // ─── Filter & Pagination ──────────────────────────────────────
 $search     = trim($_GET['q']    ?? '');
@@ -187,7 +187,7 @@ $typeBadge = function(string $t): string {
     };
 };
 
-$appName = getSetting('app_name', 'STIFIn Mulia');
+$appName = getSetting('app_name', 'Izin Hukum');
 $appLogo = getSetting('app_logo', '');
 // Warna solid brand (tanpa gradien) — dipakai tombol, badge, & placeholder.
 $brandGrad = 'background: var(--brand-color);';

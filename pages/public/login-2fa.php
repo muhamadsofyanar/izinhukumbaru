@@ -14,7 +14,7 @@ if (!is_array($pending) || (int) ($pending['expires'] ?? 0) < time()) {
 
 $csrf       = generateCSRF();
 $pageTitle  = 'Verifikasi 2 Langkah';
-$appName    = getSetting('app_name', 'STIFIn Mulia');
+$appName    = getSetting('app_name', 'Izin Hukum');
 $appLogo    = getSetting('app_logo', '');
 ?>
 <?php include __DIR__ . '/../../partials/head.php'; ?>

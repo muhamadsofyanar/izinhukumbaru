@@ -55,7 +55,7 @@ try {
             )->execute([(int) $user['id'], hash('sha256', $token)]);
 
             $resetUrl = baseUrl('reset-password?token=' . $token);
-            $appName  = getSetting('app_name', 'STIFIn Mulia');
+            $appName  = getSetting('app_name', 'Izin Hukum');
             $body = '<p>Halo <strong>' . e($user['name']) . '</strong>,</p>'
                   . '<p>Kami menerima permintaan reset password untuk akun kamu di ' . e($appName) . '. Klik tombol di bawah untuk membuat password baru — link berlaku <strong>1 jam</strong>.</p>'
                   . '<p style="text-align:center;margin:28px 0"><a href="' . e($resetUrl) . '" style="display:inline-block;background:' . e(getSetting('brand_color', '#6366f1')) . ';color:#ffffff;text-decoration:none;padding:13px 32px;border-radius:10px;font-weight:700;font-size:15px">Reset Password &rarr;</a></p>'

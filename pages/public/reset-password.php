@@ -24,7 +24,7 @@ if (preg_match('/^[a-f0-9]{64}$/', $token)) {
 
 $csrf       = generateCSRF();
 $pageTitle  = 'Reset Password';
-$appName    = getSetting('app_name', 'STIFIn Mulia');
+$appName    = getSetting('app_name', 'Izin Hukum');
 $appLogo    = getSetting('app_logo', '');
 $brandColor = getSetting('brand_color', '#6366f1');
 

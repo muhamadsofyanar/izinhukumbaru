@@ -15,7 +15,7 @@ if (!function_exists('installer_required_checks')) {
         $root        = dirname(__DIR__);          // installer/ → root project
         $installerDir = __DIR__;                   // folder installer/
         $uploadsDir  = $root . '/assets/uploads';
-        $sqlFile     = $root . '/stifin-install.sql';
+        $sqlFile     = $root . '/izinhukum-install.sql';
 
         return [
             [
@@ -59,7 +59,7 @@ if (!function_exists('installer_required_checks')) {
                 'pass'   => extension_loaded('fileinfo'),
             ],
             [
-                'label'  => 'File stifin-install.sql tersedia & terbaca',
+                'label'  => 'File izinhukum-install.sql tersedia & terbaca',
                 'detail' => '',
                 'pass'   => file_exists($sqlFile) && is_readable($sqlFile),
             ],

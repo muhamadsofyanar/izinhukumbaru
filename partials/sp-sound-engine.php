@@ -1,6 +1,6 @@
 <?php
 /**
- * Averion — Social Proof Sound Engine (partial)
+ * Izin Hukum — Social Proof Sound Engine (partial)
  * ----------------------------------------------------------------------------
  * Mendefinisikan window.spPlaySound(type) — 8 suara premium ter-sintesis via
  * Web Audio API (tanpa file audio). Dipakai oleh:

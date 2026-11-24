@@ -5,7 +5,7 @@ requireAdmin();
 $pageTitle   = 'Integrasi';
 $topbarTitle = 'Pengaturan Integrasi';
 
-$appName = getSetting('app_name', 'STIFIn Mulia');
+$appName = getSetting('app_name', 'Izin Hukum');
 
 // ─── Lisensi Vendor (Fulfillment) — HANYA instalasi vendor ───
 // Digerbangi konstanta config.php (neverOverwrite → tak pernah ada di instalasi

@@ -49,7 +49,7 @@ function mcpActionSendMessage(PDO $pdo, array $a): array
         throw new InvalidArgumentException('Member tidak ditemukan.');
     }
 
-    $subject = trim((string) ($a['subject'] ?? 'Pesan dari ' . getSetting('app_name', 'STIFIn Mulia')));
+    $subject = trim((string) ($a['subject'] ?? 'Pesan dari ' . getSetting('app_name', 'Izin Hukum')));
 
     // ── Kirim via adapter yang SUDAH ada ──────────────────────────────
     if ($channel === 'whatsapp') {

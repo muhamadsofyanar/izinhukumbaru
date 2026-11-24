@@ -66,7 +66,7 @@ generateCSRF();
                 <div>
                   <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">Nama Aplikasi</label>
                   <input type="text" name="settings[app_name]" id="inputAppName"
-                         value="<?= e($s('app_name', 'STIFIn Mulia')) ?>"
+                         value="<?= e($s('app_name', 'Izin Hukum')) ?>"
                          maxlength="60"
                          class="w-full px-3.5 py-2.5 rounded-lg text-sm border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[var(--brand-color)] focus:border-transparent outline-none transition">
                 </div>
@@ -196,8 +196,8 @@ generateCSRF();
                 <div>
                   <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">Headline</label>
                   <input type="text" name="settings[homepage_headline]"
-                         value="<?= e($s('homepage_headline', 'Produk Averion')) ?>"
-                         maxlength="100" placeholder="Produk Averion"
+                         value="<?= e($s('homepage_headline', 'Produk Izin Hukum')) ?>"
+                         maxlength="100" placeholder="Produk Izin Hukum"
                          class="w-full px-3.5 py-2.5 rounded-lg text-sm border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[var(--brand-color)] focus:border-transparent outline-none transition">
                   <p class="text-xs text-gray-400 dark:text-gray-600 mt-1">Maks 100 karakter. Kosongkan untuk pakai teks default.</p>
                 </div>
@@ -825,7 +825,7 @@ generateCSRF();
                     <div id="preview-logo-icon" class="w-5 h-5 rounded flex items-center justify-center flex-shrink-0" style="background: var(--preview-brand)">
                       <svg width="10" height="10" viewBox="0 0 10 10" fill="white"><polygon points="5,1 9,8 1,8"/></svg>
                     </div>
-                    <span id="preview-app-name" class="text-[9px] font-bold truncate text-gray-800" style="max-width: 44px"><?= e($s('app_name', 'STIFIn Mulia')) ?></span>
+                    <span id="preview-app-name" class="text-[9px] font-bold truncate text-gray-800" style="max-width: 44px"><?= e($s('app_name', 'Izin Hukum')) ?></span>
                   </div>
                   <div class="flex flex-col gap-0.5 p-1.5 flex-1">
                     <div id="preview-menu-active" class="flex items-center gap-1 px-1.5 py-1 rounded text-[8px] font-medium transition-all"
@@ -1117,7 +1117,7 @@ const Preview = {
   state: {
     brandColor:     '<?= e($s('brand_color', '#6366f1')) ?>',
     brandSecondary: '<?= e($s('brand_color_secondary', '#818cf8')) ?>',
-    appName:        '<?= e($s('app_name', 'STIFIn Mulia')) ?>',
+    appName:        '<?= e($s('app_name', 'Izin Hukum')) ?>',
     theme:          '<?= e($s('ui_theme', 'default')) ?>',
     sidebarStyle:   '<?= e($s('ui_sidebar_style', 'light')) ?>',
     topbarStyle:    '<?= e($s('ui_topbar_style', 'default')) ?>',
@@ -1164,7 +1164,7 @@ const Preview = {
   },
   updateAppName() {
     const el = document.getElementById('preview-app-name');
-    if (el) el.textContent = this.state.appName || 'Averion';
+    if (el) el.textContent = this.state.appName || 'Izin Hukum';
   },
   updateTheme() {
     const cfg = this.themeMap[this.state.theme] || this.themeMap.default;

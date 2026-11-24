@@ -28,7 +28,7 @@ $iconClass = function(string $path, bool $exact = false) use ($_uri): string {
         : 'w-5 h-5 shrink-0 text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors';
 };
 
-$appName   = getSetting('app_name', 'STIFIn Mulia');
+$appName   = getSetting('app_name', 'Izin Hukum');
 $appLogo   = getSetting('app_logo', '');
 
 // Tampilkan menu "Lisensi Saya" hanya jika user punya minimal 1 license.
@@ -113,10 +113,7 @@ if ($showTickets) {
       Dashboard
     </a>
 
-    <a href="<?= e(APP_URL) ?>/kajian" class="<?= $navClass('/kajian') ?>">
-      <svg class="<?= $iconClass('/kajian') ?>" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
-      Jadwal Kajian
-    </a>
+    <a href="<?= e(APP_URL) ?>/layanan">Layanan Izin Hukum</a>
 
     <!-- My Products / Member Area -->
     <a href="<?= e(APP_URL) ?>/member" class="<?= $navClass('/member') ?>">
@@ -177,18 +174,6 @@ if ($showTickets) {
     </a>
     <?php endif; ?>
 
-    <?php require_once __DIR__ . '/../helpers/stifin-promoters.php';
-    $stifinSidebarPromoter = stifinLinkedPromoterCode(getDB(), (int) ($_SESSION['user_id'] ?? 0));
-    if ($stifinSidebarPromoter !== null): ?>
-    <a href="<?= e(APP_URL) ?>/member/stifin-saya" class="<?= $navClass('/member/stifin-saya') ?>"><svg aria-hidden="true" class="<?= $iconClass('/member/stifin-saya') ?>" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg>
-      <span>STIFIn Saya</span></a>
-    <?php endif; ?>
-    <?php if (stifinVoucherProductId() > 0 || $stifinSidebarPromoter !== null): ?>
-    <a href="<?= e(APP_URL) ?>/member/voucher-tes" class="<?= $navClass('/member/voucher-tes') ?>">
-      <svg aria-hidden="true" class="<?= $iconClass('/member/voucher-tes') ?>" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v4a2 2 0 0 0 0 4v4H3v-4a2 2 0 0 0 0-4zM15 8v2m0 4v2"/></svg>
-      <span>Voucher Tes</span>
-    </a>
-    <?php endif; ?>
     <!-- Transactions -->
     <a href="<?= e(APP_URL) ?>/transactions" class="<?= $navClass('/transactions') ?>">
       <svg class="<?= $iconClass('/transactions') ?>" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

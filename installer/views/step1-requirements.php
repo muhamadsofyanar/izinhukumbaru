@@ -152,7 +152,7 @@ include __DIR__ . '/../partials/installer-head.php';
         lalu centang ekstensi yang bertanda silang.</li>
       <li>Versi PHP terlalu lama? Ubah lewat
         <span class="font-semibold">cPanel &rarr; Select PHP Version</span> ke PHP 8.0 atau lebih baru.</li>
-      <li>File <code class="font-mono bg-amber-100 px-1 rounded">stifin-install.sql</code> tidak ada?
+      <li>File <code class="font-mono bg-amber-100 px-1 rounded">izinhukum-install.sql</code> tidak ada?
         Pastikan semua file aplikasi ter-upload ke folder yang benar.</li>
     </ul>
     <p class="text-xs text-amber-600 mt-2">Setelah diperbaiki, klik <span class="font-semibold">Cek Ulang</span> di bawah.</p>

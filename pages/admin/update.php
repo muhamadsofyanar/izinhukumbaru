@@ -55,7 +55,7 @@ $partialUpdate = ($history[0]['status'] ?? '') === 'partial' ? $history[0] : nul
 
       <div class="mb-5">
         <h2 class="text-xl font-bold text-gray-900 dark:text-white">Update Sistem</h2>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Pembaruan STIFIn Mulia dipasang melalui GitHub dan Coolify.</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Pembaruan Izin Hukum dipasang melalui GitHub dan Coolify.</p>
       </div>
 
       <div class="max-w-2xl space-y-4">

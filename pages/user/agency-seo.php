@@ -5,7 +5,7 @@
 require_once __DIR__ . '/../../bootstrap.php';
 requireLogin();
 
-// Gerbang: hanya tampil di instalasi vendor. Pembeli Averion biasa → tak relevan.
+// Gerbang: hanya tampil di instalasi vendor. Pembeli Izin Hukum biasa → tak relevan.
 if (!agencySeoAvailable()) {
     redirect('/member');
 }

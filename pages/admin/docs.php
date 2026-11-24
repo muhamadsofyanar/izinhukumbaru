@@ -3,9 +3,9 @@ require_once __DIR__ . '/../../bootstrap.php';
 requireAdmin();
 
 $pageTitle   = 'Dokumentasi';
-$topbarTitle = 'Dokumentasi Averion';
+$topbarTitle = 'Dokumentasi Izin Hukum';
 
-$appName = getSetting('app_name', 'STIFIn Mulia');
+$appName = getSetting('app_name', 'Izin Hukum');
 
 // Nilai untuk section "Integrasi App Eksternal" (admin-only page).
 $intgRedirectSecret = redirectSigningSecret();
@@ -305,7 +305,7 @@ $myBodies = [
     ])
     . $h3('Langkah Pemasangan')
     . $steps([
-        ['Muat turun fail Averion', 'Ambil fail pemasangan dari panel lesen selepas pembelian.'],
+        ['Muat turun fail Izin Hukum', 'Ambil fail pemasangan dari panel lesen selepas pembelian.'],
         ['Muat naik ke hosting', 'Muat naik melalui FileManager / FTP ke folder ' . $mono('public_html') . ', kemudian ekstrak.'],
         ['Buka installer', 'Akses ' . $mono('https://domain-anda.com/installer') . ' di pelayar.'],
         ['Isi borang installer', 'Masukkan nama pangkalan data, pengguna, kata laluan, dan host pangkalan data.'],
@@ -589,7 +589,7 @@ $myBodies = [
         ['Daftar akaun', 'Buat akaun di ' . $mono('xendit.co') . '.'],
         ['Ambil API Key', 'Dashboard → Settings → API Keys → <strong>Secret Key</strong>.'],
         ['Ambil Webhook Token', 'Dashboard → Settings → Callbacks → <strong>Webhook Verification / Callback token</strong>.'],
-        ['Isi di Averion', $mono('/admin/integrations') . ' → Xendit → isi API Key + Webhook Verification Token.'],
+        ['Isi di Izin Hukum', $mono('/admin/integrations') . ' → Xendit → isi API Key + Webhook Verification Token.'],
         ['Daftarkan webhook', 'Masukkan URL webhook (di bawah) ke dashboard Xendit.'],
         ['Uji sandbox', 'Uji dengan mod sandbox sebelum production.'],
     ])
@@ -601,21 +601,21 @@ $myBodies = [
     $steps([
         ['Daftar akaun', 'Buat akaun di ' . $mono('moota.co') . ' dan tambah akaun bank.'],
         ['Ambil Server Key API V2', 'Dashboard Moota → Tetapan API → <strong>Server Key (API V2)</strong>.'],
-        ['Isi di Averion', $mono('/admin/integrations') . ' → Moota → isi API Key (Server Key V2) + Secret Token.'],
+        ['Isi di Izin Hukum', $mono('/admin/integrations') . ' → Moota → isi API Key (Server Key V2) + Secret Token.'],
         ['Uji sambungan', 'Simpan dahulu, kemudian klik <strong>Test Koneksi</strong> untuk pengesahan.'],
         ['Daftarkan webhook', 'Salin URL webhook (di bawah) ke Moota → Webhook, dengan Secret Token yang sama.'],
         ['Info akaun', 'Isi <strong>Bank Info</strong> (cth. "Maybank 1234567890 a/n Nama Cawangan") yang dipaparkan kepada pembeli.'],
     ])
     . $code('https://domain-anda.com/webhooks/moota-callback')
     . $h3('Cara Kod Unik Berfungsi')
-    . '<p class="mb-4">Nilai pindahan = harga + kod unik. Moota menghantar semua mutasi akaun, dan Averion memadankan automatik dengan pesanan yang menunggu pembayaran.</p>'
+    . '<p class="mb-4">Nilai pindahan = harga + kod unik. Moota menghantar semua mutasi akaun, dan Izin Hukum memadankan automatik dengan pesanan yang menunggu pembayaran.</p>'
     . $info('<strong>Nota:</strong> Moota tiada mod sandbox — menggunakan akaun bank sebenar.'),
 
   'duitku' =>
     $steps([
         ['Daftar akaun', 'Buat akaun merchant di ' . $mono('duitku.com') . '.'],
         ['Ambil kredensial', 'Dashboard Duitku → ambil <strong>Merchant Code</strong> + <strong>API Key</strong>.'],
-        ['Isi di Averion', $mono('/admin/integrations') . ' → Duitku → isi Merchant Code + API Key.'],
+        ['Isi di Izin Hukum', $mono('/admin/integrations') . ' → Duitku → isi Merchant Code + API Key.'],
         ['Mod', 'Pilih Sandbox untuk ujian, kemudian Production apabila sedia.'],
         ['Daftarkan callback', 'Masukkan URL webhook (di bawah) di konfigurasi Duitku.'],
     ])
@@ -627,7 +627,7 @@ $myBodies = [
     $steps([
         ['Daftar akaun', 'Buat akaun merchant di ' . $mono('midtrans.com') . '.'],
         ['Ambil kredensial', 'Dashboard Midtrans → <strong>Settings → Access Keys</strong> → salin <strong>Server Key</strong> (wajib) &amp; <strong>Client Key</strong> (pilihan). Guna kredensial <strong>Sandbox</strong> semasa mod Sandbox.'],
-        ['Isi di Averion', $mono('/admin/integrations') . ' → Midtrans → isi Server Key, Client Key (pilihan), Merchant ID, kemudian pilih mod.'],
+        ['Isi di Izin Hukum', $mono('/admin/integrations') . ' → Midtrans → isi Server Key, Client Key (pilihan), Merchant ID, kemudian pilih mod.'],
         ['Salin URL Webhook', 'Di halaman config Midtrans, salin <strong>Payment Notification URL</strong> (butang Copy).'],
         ['Daftarkan di Midtrans', 'Tampal URL itu di Dashboard Midtrans → <strong>Settings → Configuration</strong> → <strong>Payment Notification URL</strong>.'],
         ['Uji sandbox', 'Uji dengan mod Sandbox sebelum production.'],
@@ -640,7 +640,7 @@ $myBodies = [
     $steps([
         ['Daftar akaun', 'Buat akaun merchant di ' . $mono('tripay.co.id') . ' dan lengkapkan pengesahan merchant.'],
         ['Ambil kredensial', 'Dashboard Tripay → <strong>Merchant → API</strong> → salin <strong>Kod Merchant</strong>, <strong>API Key</strong>, &amp; <strong>Private Key</strong>. Guna kredensial <strong>Sandbox</strong> semasa mod Sandbox.'],
-        ['Isi di Averion', $mono('/admin/integrations') . ' → Tripay → isi Kod Merchant + API Key + Private Key, kemudian pilih mod.'],
+        ['Isi di Izin Hukum', $mono('/admin/integrations') . ' → Tripay → isi Kod Merchant + API Key + Private Key, kemudian pilih mod.'],
         ['Salin URL Callback', 'Di halaman config Tripay, salin <strong>Callback URL</strong> (butang Copy).'],
         ['Daftarkan di Tripay', 'Tampal URL itu di Dashboard Tripay → <strong>Merchant → Callback URL</strong>.'],
         ['Uji sandbox', 'Uji dengan mod Sandbox sebelum production.'],
@@ -683,14 +683,14 @@ $myBodies = [
   'email-setup' =>
     $steps([
         ['Daftar Mailketing', 'Buat akaun di Mailketing dan ambil <strong>API Key</strong> dari dashboard.'],
-        ['Isi di Averion', $mono('/admin/integrations') . ' → Mailketing → isi API Key, <strong>Sender Email</strong>, dan <strong>Sender Name</strong>.'],
+        ['Isi di Izin Hukum', $mono('/admin/integrations') . ' → Mailketing → isi API Key, <strong>Sender Email</strong>, dan <strong>Sender Name</strong>.'],
         ['Guna', 'Emel digunakan automatik untuk notifikasi emel, Email Sequence, dan Abandoned Cart (saluran emel).'],
     ])
     . $info('<strong>Petua:</strong> Guna sender emel berdomain sendiri (cth. ' . $mono('noreply@domainanda.com') . ') supaya kebolehhantaran lebih baik.'),
 
   'lisensi-produk' =>
     $h3('Cara Berfungsi')
-    . '<p class="mb-5">Untuk produk yang dijual dengan perlindungan lesen (cth. perisian/plugin), Averion menjana <strong>license key</strong> setiap pembelian. Perisian milik pembeli kemudian mengesahkan kunci tersebut ke API Averion (lihat <strong>API Developer</strong>).</p>'
+    . '<p class="mb-5">Untuk produk yang dijual dengan perlindungan lesen (cth. perisian/plugin), Izin Hukum menjana <strong>license key</strong> setiap pembelian. Perisian milik pembeli kemudian mengesahkan kunci tersebut ke API Izin Hukum (lihat <strong>API Developer</strong>).</p>'
     . $steps([
         ['Aktifkan lesen pada produk', 'Di borang produk, aktifkan pilihan lesen dan tentukan bilangan <strong>seat</strong> (maks pengaktifan) serta tempoh sah (pilihan).'],
         ['Kunci terbit automatik', 'Apabila pesanan dibayar, license key dijana automatik dan dihantar kepada pembeli.'],
@@ -740,7 +740,7 @@ $myBodies = [
         ['Buat credentials', 'APIs &amp; Services → Credentials → <strong>Create OAuth 2.0 Client ID</strong>.'],
         ['Application type', 'Pilih <strong>Web application</strong>.'],
         ['Redirect URI', 'Tambah Authorized redirect URI (di bawah).'],
-        ['Isi di Averion', $mono('/admin/settings') . ' → isi Client ID + Client Secret → aktifkan toggle.'],
+        ['Isi di Izin Hukum', $mono('/admin/settings') . ' → isi Client ID + Client Secret → aktifkan toggle.'],
     ])
     . $code('https://domain-anda.com/auth/google/callback')
     . $warn('<strong>Nota:</strong> Admin tidak boleh log masuk via Google (by design) — guna emel &amp; kata laluan.')
@@ -773,7 +773,7 @@ echo $section('instalasi',
   ])
   . $h3('Langkah Instalasi')
   . $steps([
-      ['Download file Averion', 'Ambil file instalasi dari panel lisensi setelah pembelian.'],
+      ['Download file Izin Hukum', 'Ambil file instalasi dari panel lisensi setelah pembelian.'],
       ['Upload ke hosting', 'Upload via FileManager / FTP ke folder ' . $mono('public_html') . ', lalu ekstrak.'],
       ['Buka installer', 'Akses ' . $mono('https://domain-kamu.com/installer') . ' di browser.'],
       ['Isi form installer', 'Masukkan nama database, user database, password database, dan host database.'],
@@ -787,7 +787,7 @@ echo $section('instalasi',
 
 echo $section('aktivasi-lisensi',
   $L('Aktivasi Lisensi', 'Pengaktifan Lesen', 'License Activation'),
-  $L('Cara mengaktifkan lisensi Averion setelah instalasi.', 'Cara mengaktifkan lesen selepas pemasangan.', 'Activate your license after installation.'),
+  $L('Cara mengaktifkan lisensi Izin Hukum setelah instalasi.', 'Cara mengaktifkan lesen selepas pemasangan.', 'Activate your license after installation.'),
   $steps([
       ['Buka halaman Lisensi', 'Akses ' . $mono('/admin/license') . ' setelah instalasi selesai.'],
       ['Masukkan license key', 'Gunakan license key yang dikirim ke email saat pembelian.'],
@@ -803,7 +803,7 @@ echo $section('aktivasi-lisensi',
 
 echo $section('setup-awal',
   $L('Setup Pertama', 'Persediaan Awal', 'Initial Setup'),
-  $L('Konfigurasi dasar setelah Averion berhasil diinstall.', 'Konfigurasi asas selepas Averion dipasang.', 'Basic configuration after install.'),
+  $L('Konfigurasi dasar setelah Izin Hukum berhasil diinstall.', 'Konfigurasi asas selepas Izin Hukum dipasang.', 'Basic configuration after install.'),
   $steps([
       ['Branding', 'Buka ' . $mono('/admin/branding') . ' → isi nama toko, upload logo & favicon, atur warna brand.'],
       ['Pengaturan umum', 'Buka ' . $mono('/admin/settings') . ' → isi email & URL support, mata uang, dll.'],
@@ -856,7 +856,7 @@ echo $section('produk-checkout',
   . $warn('<strong>Slug URL</strong> membentuk alamat publik produk — hindari menggantinya setelah produk tersebar (link lama bisa mati). <strong>Durasi Akses &gt; 0</strong> mengubah produk jadi <strong>langganan</strong> (akses kedaluwarsa setelah N hari); biarkan <strong>0</strong> untuk akses selamanya.')
 
   . $h3('2. Login Checkout vs Public Checkout')
-  . '<p class="mb-3">Averion punya dua mode order. Atur per produk (kolom <strong>Mode Checkout</strong>):</p>'
+  . '<p class="mb-3">Izin Hukum punya dua mode order. Atur per produk (kolom <strong>Mode Checkout</strong>):</p>'
   . $ul([
       '<strong>Login Checkout:</strong> pembeli login / daftar akun dulu. Cocok untuk <strong>membership &amp; kelas</strong> (butuh akun untuk mengakses isinya).',
       '<strong>Public Checkout:</strong> pembeli cukup isi nama + email + WA, <strong>tanpa akun</strong>. Friksi rendah — cocok untuk produk sekali-beli & jualan lewat landing page.',
@@ -873,7 +873,7 @@ echo $section('produk-checkout',
   . $steps([
       ['Cara A — Halaman produk bawaan (paling cepat)', 'Tak perlu landing sendiri. Bagikan link ' . $mono('/products/nama-produk') . ' — sudah ada tombol beli &amp; checkout bawaan.'],
       ['Cara B — Landing sendiri via Canvas', 'Buat HTML landing-mu, pasang di <strong>Canvas</strong> (lihat topik Canvas), lalu tautkan ke produk ini. Di HTML-mu, arahkan <strong>tombol Beli</strong> ke link checkout di atas.'],
-      ['Cara C — Landing di luar Averion', 'Punya landing di situs lain? Di produk, isi <strong>Landing Page = URL eksternal</strong>. Di halaman landing itu, buat tombol yang menuju ' . $mono('/order/nama-produk') . '.'],
+      ['Cara C — Landing di luar Izin Hukum', 'Punya landing di situs lain? Di produk, isi <strong>Landing Page = URL eksternal</strong>. Di halaman landing itu, buat tombol yang menuju ' . $mono('/order/nama-produk') . '.'],
   ])
   . $info('<strong>Tips:</strong> Gunakan thumbnail rasio 1:1, dan pakai <strong>Public Checkout</strong> untuk jualan lewat landing agar konversi lebih mulus.')
 
@@ -1361,7 +1361,7 @@ echo $section('langganan',
   $L('Langganan Member', 'Langganan Ahli', 'Member Subscriptions'),
   $L('Kelola akses berjangka member (langganan) + reminder perpanjangan otomatis.', 'Urus akses berjangka ahli.', 'Manage members\' time-limited access.'),
   $h3('Cara kerja')
-  . '<p class="mb-4">Produk dengan <strong>Durasi Akses</strong> (mis. 30 hari) otomatis jadi "langganan": akses habis pada tanggalnya, lalu member memperpanjang dengan membeli ulang. <strong>Averion mengingatkan otomatis</strong> sebelum habis (model manual-renewal — tanpa auto-charge).</p>'
+  . '<p class="mb-4">Produk dengan <strong>Durasi Akses</strong> (mis. 30 hari) otomatis jadi "langganan": akses habis pada tanggalnya, lalu member memperpanjang dengan membeli ulang. <strong>Izin Hukum mengingatkan otomatis</strong> sebelum habis (model manual-renewal — tanpa auto-charge).</p>'
   . $h3('Reminder otomatis')
   . $ul([
       'Reminder email &amp; WhatsApp dikirim otomatis <strong>H-3</strong> &amp; <strong>H-1</strong> sebelum akses habis, berisi link perpanjang.',
@@ -1899,7 +1899,7 @@ echo $section('averion-studio',
   . '<p class="mb-4"><strong>Averion Studio</strong> adalah aplikasi pendamping di ' . $mono('studio.averion.id') . ' yang membantu membuat materi promosi — broadcast WhatsApp, kalender konten, script VSL, ad copy, sampai prompt desain visual — berbasis data produk di instalasimu.</p>'
   . $steps([
       ['Buat token', 'Buka ' . $mono('/admin/studio-integration') . ' → <strong>Generate Token</strong>. Token tampil sekali — salin &amp; simpan.'],
-      ['Login Studio', 'Buka ' . $mono('studio.averion.id') . ' → login dengan email + license key Averion kamu.'],
+      ['Login Studio', 'Buka ' . $mono('studio.averion.id') . ' → login dengan email + license key Izin Hukum kamu.'],
       ['Hubungkan', 'Tempel token di Studio → Studio bisa membaca daftar produk aktifmu dan mulai membuatkan materi.'],
   ])
   . $h3('Data yang dibagikan')
@@ -2038,7 +2038,7 @@ echo $section('payment-gateway',
   ])
   . '<p class="mb-3">Setiap gateway punya panduan setup tersendiri di menu kiri (Xendit, Duitku, Midtrans, Tripay, Moota, PayPal). Aktifkan di ' . $mono('/admin/integrations') . ' → tab <strong>Payment Gateway</strong>. Isi kredensial, lalu <strong>daftarkan webhook</strong> gateway agar status pembayaran ter-update otomatis saat pembeli bayar.</p>'
   . $h3('Tentang Webhook (wajib untuk gateway otomatis)')
-  . '<p class="mb-3"><strong>Webhook</strong> = URL yang dipanggil gateway untuk memberi tahu Averion bahwa pembayaran sudah masuk. Tanpa mendaftarkan webhook, status order <strong>tidak akan berubah menjadi Lunas</strong> otomatis.</p>'
+  . '<p class="mb-3"><strong>Webhook</strong> = URL yang dipanggil gateway untuk memberi tahu Izin Hukum bahwa pembayaran sudah masuk. Tanpa mendaftarkan webhook, status order <strong>tidak akan berubah menjadi Lunas</strong> otomatis.</p>'
   . $info('<strong>Tak perlu ketik manual:</strong> URL webhook tiap gateway sudah disediakan di halaman config (kolom <em>URL Webhook</em> + tombol <strong>Copy</strong>). Salin dari sana, lalu tempel di dashboard gateway sesuai lokasi di topik masing-masing di bawah.')
   . $info('<strong>Info:</strong> Hanya satu gateway otomatis aktif dalam satu waktu; Manual Transfer bisa tetap berdampingan.')
   . $warn('<strong>Perhatian:</strong> HTTPS wajib untuk webhook di production — gateway tidak mengirim ke URL HTTP.')
@@ -2051,7 +2051,7 @@ echo $section('xendit',
       ['Daftar akun', 'Buat akun di ' . $mono('xendit.co') . '.'],
       ['Ambil API Key', 'Dashboard → Settings → API Keys → <strong>Secret Key</strong>.'],
       ['Ambil Webhook Token', 'Dashboard → Settings → Callbacks → <strong>Webhook Verification / Callback token</strong>.'],
-      ['Isi di Averion', $mono('/admin/integrations') . ' → Xendit → isi API Key + Webhook Verification Token.'],
+      ['Isi di Izin Hukum', $mono('/admin/integrations') . ' → Xendit → isi API Key + Webhook Verification Token.'],
       ['Salin URL Webhook', 'Di halaman config Xendit, salin <strong>URL Webhook</strong> (tombol Copy).'],
       ['Daftarkan di Xendit', 'Tempel URL itu di Dashboard Xendit → <strong>Settings → Callbacks</strong> → bagian <strong>Invoices</strong> → <strong>Invoices paid</strong>. Tanpa ini, status pembayaran tak ter-update otomatis.'],
       ['Test sandbox', 'Uji dengan mode sandbox sebelum production.'],
@@ -2067,14 +2067,14 @@ echo $section('moota',
   $steps([
       ['Daftar akun', 'Buat akun di ' . $mono('moota.co') . ' dan tambahkan rekening bank.'],
       ['Ambil Server Key API V2', 'Dashboard Moota → Pengaturan API → <strong>Server Key (API V2)</strong>.'],
-      ['Isi di Averion', $mono('/admin/integrations') . ' → Moota → isi API Key (Server Key V2) + Secret Token.'],
+      ['Isi di Izin Hukum', $mono('/admin/integrations') . ' → Moota → isi API Key (Server Key V2) + Secret Token.'],
       ['Test koneksi', 'Simpan dulu, lalu klik <strong>Test Koneksi</strong> untuk verifikasi.'],
       ['Daftarkan webhook', 'Salin URL webhook (di bawah) ke Moota → Webhook, dengan Secret Token yang sama.'],
       ['Info rekening', 'Isi <strong>Bank Info</strong> (mis. "BCA 1234567890 a/n Nama Cabang") yang tampil ke pembeli.'],
   ])
   . $code('https://domain-kamu.com/webhooks/moota-callback')
   . $h3('Cara Kerja Kode Unik')
-  . '<p class="mb-4">Nominal transfer = harga + kode unik. Moota mengirim semua mutasi rekening, dan Averion otomatis mencocokkan dengan order yang menunggu pembayaran.</p>'
+  . '<p class="mb-4">Nominal transfer = harga + kode unik. Moota mengirim semua mutasi rekening, dan Izin Hukum otomatis mencocokkan dengan order yang menunggu pembayaran.</p>'
   . $info('<strong>Catatan:</strong> Moota tidak punya mode sandbox — menggunakan rekening bank asli.')
 );
 
@@ -2084,7 +2084,7 @@ echo $section('duitku',
   $steps([
       ['Daftar akun', 'Buat akun merchant di ' . $mono('duitku.com') . '.'],
       ['Ambil kredensial', 'Dashboard Duitku → ambil <strong>Merchant Code</strong> + <strong>API Key</strong>.'],
-      ['Isi di Averion', $mono('/admin/integrations') . ' → Duitku → isi Merchant Code + API Key.'],
+      ['Isi di Izin Hukum', $mono('/admin/integrations') . ' → Duitku → isi Merchant Code + API Key.'],
       ['Mode', 'Pilih <strong>Sandbox</strong> untuk uji coba, lalu <strong>Production</strong> saat siap.'],
       ['Salin URL Webhook', 'Di halaman config Duitku, salin <strong>URL Webhook</strong> (tombol Copy).'],
       ['Daftarkan di Duitku', 'Tempel URL itu di Dashboard Duitku → <strong>Proyek</strong> → <strong>Callback URL</strong> (URL notifikasi). Tanpa ini, status pembayaran tak ter-update otomatis.'],
@@ -2100,7 +2100,7 @@ echo $section('midtrans',
   $steps([
       ['Daftar akun', 'Buat akun merchant di ' . $mono('midtrans.com') . '.'],
       ['Ambil kredensial', 'Dashboard Midtrans → <strong>Settings → Access Keys</strong> → salin <strong>Server Key</strong> (wajib) &amp; <strong>Client Key</strong> (opsional). Pakai kredensial <strong>Sandbox</strong> saat mode Sandbox, <strong>Production</strong> saat live.'],
-      ['Isi di Averion', $mono('/admin/integrations') . ' → Midtrans → isi <strong>Server Key</strong>, <strong>Client Key</strong> (opsional), <strong>Merchant ID</strong> (informatif), lalu pilih <strong>mode</strong> (Sandbox/Production).'],
+      ['Isi di Izin Hukum', $mono('/admin/integrations') . ' → Midtrans → isi <strong>Server Key</strong>, <strong>Client Key</strong> (opsional), <strong>Merchant ID</strong> (informatif), lalu pilih <strong>mode</strong> (Sandbox/Production).'],
       ['Salin URL Webhook', 'Di halaman config Midtrans, salin <strong>Payment Notification URL</strong> (tombol Copy).'],
       ['Daftarkan di Midtrans', 'Tempel URL itu di Dashboard Midtrans → <strong>Settings → Configuration</strong> → <strong>Payment Notification URL</strong>. Tanpa ini, status pembayaran tak ter-update otomatis.'],
       ['Test sandbox', 'Uji dengan mode Sandbox sebelum production.'],
@@ -2117,7 +2117,7 @@ echo $section('tripay',
   $steps([
       ['Daftar akun', 'Buat akun merchant di ' . $mono('tripay.co.id') . ' dan selesaikan verifikasi merchant.'],
       ['Ambil kredensial', 'Dashboard Tripay → <strong>Merchant → API</strong> → salin <strong>Kode Merchant</strong>, <strong>API Key</strong>, &amp; <strong>Private Key</strong>. Pakai kredensial <strong>Sandbox</strong> saat mode Sandbox.'],
-      ['Isi di Averion', $mono('/admin/integrations') . ' → Tripay → isi <strong>Kode Merchant</strong> + <strong>API Key</strong> + <strong>Private Key</strong>, lalu pilih <strong>mode</strong>.'],
+      ['Isi di Izin Hukum', $mono('/admin/integrations') . ' → Tripay → isi <strong>Kode Merchant</strong> + <strong>API Key</strong> + <strong>Private Key</strong>, lalu pilih <strong>mode</strong>.'],
       ['Salin URL Callback', 'Di halaman config Tripay, salin <strong>Callback URL</strong> (tombol Copy).'],
       ['Daftarkan di Tripay', 'Tempel URL itu di Dashboard Tripay → <strong>Merchant → Callback URL</strong>. Tanpa ini, status pembayaran tak ter-update otomatis.'],
       ['Test sandbox', 'Uji dengan mode Sandbox sebelum production.'],
@@ -2131,11 +2131,11 @@ echo $section('tripay',
 echo $section('paypal',
   $L('Integrasi PayPal', 'Integrasi PayPal', 'PayPal Integration'),
   $L('Terima pembayaran internasional (kartu / saldo PayPal) untuk pembeli luar negeri.', 'Terima bayaran antarabangsa.', 'Accept international payments.'),
-  '<p class="mb-4">Gateway <strong>PayPal</strong> cocok untuk pembeli <strong>luar negeri</strong> (mis. Malaysia, Singapura). PayPal tidak mendukung Rupiah, jadi Averion menagih dalam <strong>USD</strong> — nominal dikonversi otomatis dari total IDR memakai <strong>kurs</strong> yang kamu tetapkan. Pencatatan order tetap dalam IDR.</p>'
+  '<p class="mb-4">Gateway <strong>PayPal</strong> cocok untuk pembeli <strong>luar negeri</strong> (mis. Malaysia, Singapura). PayPal tidak mendukung Rupiah, jadi Izin Hukum menagih dalam <strong>USD</strong> — nominal dikonversi otomatis dari total IDR memakai <strong>kurs</strong> yang kamu tetapkan. Pencatatan order tetap dalam IDR.</p>'
   . $steps([
       ['Buat akun Bisnis PayPal', 'Daftar/masuk di ' . $mono('developer.paypal.com') . ' → buat App untuk dapat kredensial.'],
       ['Ambil kredensial', 'Salin <strong>Client ID</strong> + <strong>Secret</strong> (mode Sandbox untuk uji, Live untuk produksi).'],
-      ['Isi di Averion', $mono('/admin/integrations') . ' → PayPal → tempel Client ID + Secret, pilih mode.'],
+      ['Isi di Izin Hukum', $mono('/admin/integrations') . ' → PayPal → tempel Client ID + Secret, pilih mode.'],
       ['Set kurs IDR→USD', 'Isi <strong>kurs</strong> (mis. 1 USD = Rp16.000). Tanpa kurs terisi, PayPal tidak akan ditawarkan di checkout.'],
       ['Aktifkan', 'Toggle aktif. Tombol PayPal muncul di checkout untuk pembeli.'],
   ])
@@ -2198,7 +2198,7 @@ echo $section('telegram',
       ['Buat bot &amp; salin Bot Token', 'Buka <a href="https://t.me/BotFather" target="_blank" rel="noopener noreferrer" class="font-medium underline" style="color:var(--brand-color)">@BotFather</a> di Telegram → ketik <strong>/newbot</strong> → ikuti langkahnya → salin <strong>Bot Token</strong> yang diberikan.'],
       ['Dapatkan Chat ID', 'Untuk chat pribadi: buka <a href="https://t.me/ChatIdInfoBot" target="_blank" rel="noopener noreferrer" class="font-medium underline" style="color:var(--brand-color)">@ChatIdInfoBot</a> lalu ketik <strong>/start</strong> — Chat ID kamu langsung tampil. Untuk <strong>channel/grup</strong>: forward salah satu pesan dari channel itu ke <a href="https://t.me/ChatIdInfoBot" target="_blank" rel="noopener noreferrer" class="font-medium underline" style="color:var(--brand-color)">@ChatIdInfoBot</a> → Chat ID channel muncul (diawali <strong>-100</strong>).'],
       ['Izinkan bot mengirim', 'Kirim <strong>/start</strong> ke <strong>bot baru buatanmu</strong> (bukan @ChatIdInfoBot) agar bot boleh mengirim pesan ke kamu. Untuk grup/channel: <strong>tambahkan bot sebagai anggota/admin</strong> dulu.'],
-      ['Isi di Averion', 'Buka ' . $mono('/admin/integrations') . ' → tab <strong>Telegram</strong> → tempel <strong>Bot Token</strong> &amp; <strong>Chat ID</strong> → nyalakan <strong>Aktifkan Notifikasi Telegram</strong> → <strong>Simpan</strong>.'],
+      ['Isi di Izin Hukum', 'Buka ' . $mono('/admin/integrations') . ' → tab <strong>Telegram</strong> → tempel <strong>Bot Token</strong> &amp; <strong>Chat ID</strong> → nyalakan <strong>Aktifkan Notifikasi Telegram</strong> → <strong>Simpan</strong>.'],
       ['Test Kirim', 'Klik tombol <strong>Test Kirim</strong>. Kalau pesan tes masuk ke Telegram-mu, konfigurasi sudah benar.'],
   ])
   . $h3('Atur Jenis Notifikasi')
@@ -2215,12 +2215,12 @@ echo $section('email-setup',
   $L('Pengirim email untuk notifikasi & drip campaign.', 'Penghantar emel untuk notifikasi.', 'Email sender for notifications.'),
   $steps([
       ['Daftar Mailketing', 'Buat akun di Mailketing dan ambil <strong>API Key</strong> dari dashboard.'],
-      ['Isi di Averion', $mono('/admin/integrations') . ' → Mailketing → isi API Key, <strong>Sender Email</strong>, dan <strong>Sender Name</strong>.'],
+      ['Isi di Izin Hukum', $mono('/admin/integrations') . ' → Mailketing → isi API Key, <strong>Sender Email</strong>, dan <strong>Sender Name</strong>.'],
       ['Pakai', 'Email otomatis dipakai untuk notifikasi email, Email Sequence, dan Abandoned Cart (channel email).'],
   ])
   . $info('<strong>Tips:</strong> Gunakan sender email berdomain sendiri (mis. ' . $mono('noreply@domainmu.com') . ') agar keterkiriman lebih baik.')
   . $h3('List Otomatis — Pembeli Masuk List Mailketing')
-  . '<p class="mb-3">Averion bisa <strong>otomatis menambahkan pembeli</strong> ke list Mailketing kamu (ala Sejoli): satu list saat <strong>order dibuat</strong> (checkout) dan satu list saat <strong>order lunas</strong>. Nama, email, &amp; nomor HP pembeli ikut terkirim. Cocok untuk pipeline follow-up (mis. list "Pending Payment" &amp; list "Sudah Beli").</p>'
+  . '<p class="mb-3">Izin Hukum bisa <strong>otomatis menambahkan pembeli</strong> ke list Mailketing kamu (ala Sejoli): satu list saat <strong>order dibuat</strong> (checkout) dan satu list saat <strong>order lunas</strong>. Nama, email, &amp; nomor HP pembeli ikut terkirim. Cocok untuk pipeline follow-up (mis. list "Pending Payment" &amp; list "Sudah Beli").</p>'
   . $steps([
       ['Simpan API Key dulu', 'Pastikan API Key Mailketing sudah tersimpan (langkah di atas).'],
       ['Muat daftar list', 'Di ' . $mono('/admin/integrations') . ' → kartu Mailketing → bagian <strong>List Otomatis</strong> → klik <strong>Muat daftar list</strong> (mengambil list dari akun Mailketing-mu).'],
@@ -2237,7 +2237,7 @@ echo $section('lisensi-produk',
   $L('Lisensi Produk', 'Lesen Produk', 'Product Licenses'),
   $L('Kelola license key untuk produk digital yang kamu jual (software, plugin, tema).', 'Urus kunci lesen untuk produk digital yang dijual.', 'Manage license keys for the digital products you sell.'),
   $h3('Cara Kerja')
-  . '<p class="mb-5">Untuk produk yang dijual dengan proteksi lisensi (mis. software/plugin), Averion membuatkan <strong>license key</strong> per pembelian. Software milik buyer lalu memverifikasi key tersebut ke API Averion (lihat <strong>API Developer</strong>).</p>'
+  . '<p class="mb-5">Untuk produk yang dijual dengan proteksi lisensi (mis. software/plugin), Izin Hukum membuatkan <strong>license key</strong> per pembelian. Software milik buyer lalu memverifikasi key tersebut ke API Izin Hukum (lihat <strong>API Developer</strong>).</p>'
   . $steps([
       ['Aktifkan lisensi di produk', 'Di form produk, aktifkan opsi lisensi dan tentukan jumlah <strong>seat</strong> (maks aktivasi) serta masa berlaku (opsional).'],
       ['Key otomatis terbit', 'Saat order dibayar, license key dibuat otomatis dan dikirim ke buyer.'],
@@ -2322,7 +2322,7 @@ echo $section('google-oauth',
       ['Buat credentials', 'APIs &amp; Services → Credentials → <strong>Create OAuth 2.0 Client ID</strong>.'],
       ['Application type', 'Pilih <strong>Web application</strong>.'],
       ['Redirect URI', 'Tambahkan Authorized redirect URI (di bawah).'],
-      ['Isi di Averion', $mono('/admin/settings') . ' → isi Client ID + Client Secret → aktifkan toggle.'],
+      ['Isi di Izin Hukum', $mono('/admin/settings') . ' → isi Client ID + Client Secret → aktifkan toggle.'],
   ])
   . $code('https://domain-kamu.com/auth/google/callback')
   . $warn('<strong>Catatan:</strong> Admin tidak bisa login via Google (by design) — gunakan email &amp; password.')
@@ -2333,7 +2333,7 @@ echo $section('pwa',
   $L('PWA — Install sebagai Aplikasi', 'PWA — Pasang sebagai Aplikasi', 'PWA — Install as App'),
   $L('Pembeli/member bisa memasang situsmu sebagai aplikasi di HP/desktop (white-label).', 'Pelanggan boleh pasang laman sebagai aplikasi.', 'Let buyers install your site as an app.'),
   $h3('Apa itu')
-  . '<p class="mb-4">Averion mendukung <strong>PWA (Progressive Web App)</strong>: pengunjung/member bisa <strong>memasang</strong> situsmu sebagai aplikasi di layar HP atau desktop — lengkap dengan <strong>nama &amp; ikon brand-mu</strong> (white-label). Dibuka layaknya aplikasi biasa (jendela sendiri, tanpa address bar).</p>'
+  . '<p class="mb-4">Izin Hukum mendukung <strong>PWA (Progressive Web App)</strong>: pengunjung/member bisa <strong>memasang</strong> situsmu sebagai aplikasi di layar HP atau desktop — lengkap dengan <strong>nama &amp; ikon brand-mu</strong> (white-label). Dibuka layaknya aplikasi biasa (jendela sendiri, tanpa address bar).</p>'
   . $ul([
       'Manifest dibuat <strong>dinamis</strong> mengikuti nama &amp; warna brand; ikon di-generate otomatis dari logo/ikon yang kamu set.',
       'Tombol <strong>Install</strong> muncul otomatis di topbar bila browser mendukung (Chrome/Edge/Android). Di iPhone lewat Safari → <strong>Bagikan → Tambah ke Layar Utama</strong>.',
@@ -2343,7 +2343,7 @@ echo $section('pwa',
       ['Atur nama & ikon', 'Nama app = <strong>Nama Aplikasi</strong> di ' . $mono('/admin/branding') . '. Ikon PWA bisa kamu unggah di ' . $mono('/admin/branding') . ' (bila kosong, dipakai logo situs).'],
       ['Nyalakan / matikan', 'Toggle <strong>PWA</strong> di ' . $mono('/admin/branding') . ' (bawaan: <strong>aktif</strong>).'],
   ])
-  . $info('Karena memakai ikon &amp; nama brand pembeli, tiap instalasi tampil sebagai aplikasi milik mereka sendiri — bukan &ldquo;Averion&rdquo;.')
+  . $info('Karena memakai ikon &amp; nama brand pembeli, tiap instalasi tampil sebagai aplikasi milik mereka sendiri — bukan &ldquo;Izin Hukum&rdquo;.')
 );
 
 echo $section('member-online',
@@ -2361,7 +2361,7 @@ echo $section('member-online',
 
 echo $section('update-sistem',
   $L('Update Sistem', 'Kemas Kini Sistem', 'System Update'),
-  $L('Update Averion ke versi terbaru dengan aman.', 'Kemas kini ke versi terkini.', 'Update Averion safely.'),
+  $L('Update Izin Hukum ke versi terbaru dengan aman.', 'Kemas kini ke versi terkini.', 'Update Izin Hukum safely.'),
   $h3('Sebelum Update (wajib)')
   . $ul([
       '<strong>Backup Database dulu</strong> — buka ' . $mono('/admin/backups') . ' → <strong>Backup Sekarang</strong> (lihat topik Backup Database). Ini jaring pengaman utama.',
@@ -2374,7 +2374,7 @@ echo $section('update-sistem',
       ['Update sekarang', 'Klik <strong>Update Sekarang</strong> → konfirmasi → proses otomatis.'],
       ['Proses', 'Download → verifikasi → backup otomatis → apply file → jalankan migrasi database → selesai.'],
   ])
-  . '<p class="mb-3">Averion membuat <strong>snapshot file otomatis</strong> tepat sebelum menerapkan update. Lokasi utama di luar folder aplikasi (' . $mono('backups/') . '); bila hosting membatasi akses, fallback ke ' . $mono('storage/update-backups/') . '. Retensi mempertahankan tiga snapshot terbaru ditambah snapshot sukses terakhir bila lebih lama; pembersihan lama berjalan bertahap lewat cron. Backup database di menu Backup punya retensi terpisah. ' . $mono('config.php') . ' &amp; folder ' . $mono('uploads/') . ' <strong>tidak</strong> ditimpa.</p>'
+  . '<p class="mb-3">Izin Hukum membuat <strong>snapshot file otomatis</strong> tepat sebelum menerapkan update. Lokasi utama di luar folder aplikasi (' . $mono('backups/') . '); bila hosting membatasi akses, fallback ke ' . $mono('storage/update-backups/') . '. Retensi mempertahankan tiga snapshot terbaru ditambah snapshot sukses terakhir bila lebih lama; pembersihan lama berjalan bertahap lewat cron. Backup database di menu Backup punya retensi terpisah. ' . $mono('config.php') . ' &amp; folder ' . $mono('uploads/') . ' <strong>tidak</strong> ditimpa.</p>'
   . $h3('Pemberitahuan otomatis saat ada update')
   . $ul([
       'Sistem <strong>mengecek update sendiri 2&times; sehari</strong> — tidak perlu cek manual untuk tahu ada rilis baru.',
@@ -2513,7 +2513,7 @@ echo $section('backup-db',
   $L('Backup Database', 'Sandaran Pangkalan Data', 'Database Backup'),
   $L('Backup otomatis harian seluruh database — unduh salinannya secara berkala.', 'Sandaran automatik harian seluruh pangkalan data.', 'Automatic daily database backups.'),
   $h3('Cara kerja')
-  . '<p class="mb-4">Averion mem-backup <strong>seluruh database</strong> (struktur + data) otomatis <strong>sekali sehari</strong> ke file ' . $mono('.sql.gz') . ' di folder ' . $mono('backups/db') . ' — di luar folder web bila hosting mengizinkan, atau terlindungi ' . $mono('.htaccess') . ' bila tidak. Tanpa perlu setup cron. Backup lama dihapus otomatis sesuai <strong>retensi</strong> (default 7 hari).</p>'
+  . '<p class="mb-4">Izin Hukum mem-backup <strong>seluruh database</strong> (struktur + data) otomatis <strong>sekali sehari</strong> ke file ' . $mono('.sql.gz') . ' di folder ' . $mono('backups/db') . ' — di luar folder web bila hosting mengizinkan, atau terlindungi ' . $mono('.htaccess') . ' bila tidak. Tanpa perlu setup cron. Backup lama dihapus otomatis sesuai <strong>retensi</strong> (default 7 hari).</p>'
   . $steps([
       ['Buka halaman', 'Akses ' . $mono('/admin/backups') . ' (menu <strong>Backup Database</strong> — khusus akun admin, staff tidak bisa).'],
       ['Backup manual', 'Klik <strong>Backup Sekarang</strong> kapan pun — mis. sebelum update sistem atau perubahan besar.'],
@@ -2521,7 +2521,7 @@ echo $section('backup-db',
       ['Atur', 'Aktif/nonaktifkan backup otomatis &amp; ubah retensi di bagian <strong>Pengaturan</strong>.'],
   ])
   . $h3('Memulihkan (restore) backup')
-  . '<p class="mb-3">Restore dipakai untuk <strong>pemulihan bencana</strong> — mis. data terhapus / rusak — pada versi Averion yang <strong>SAMA</strong> dengan backup.</p>'
+  . '<p class="mb-3">Restore dipakai untuk <strong>pemulihan bencana</strong> — mis. data terhapus / rusak — pada versi Izin Hukum yang <strong>SAMA</strong> dengan backup.</p>'
   . $ul([
       'Ekstrak file ' . $mono('.sql.gz') . ' (jadi ' . $mono('.sql') . ') dengan WinRAR/7-Zip atau ' . $mono('gunzip') . '.',
       'Buka <strong>phpMyAdmin</strong> di hosting → pilih database portal → tab <strong>Import</strong> → pilih file → Go.',
@@ -2533,7 +2533,7 @@ echo $section('backup-db',
 
 echo $section('data-import',
   $L('Import Data', 'Import Data', 'Data Import'),
-  $L('Pindahkan user &amp; riwayat transaksi dari platform lain (mis. Sejoli) ke Averion, lengkap dengan omzet dan akses produk.', 'Pindahkan pengguna &amp; sejarah transaksi dari platform lain ke Averion.', 'Bulk-import users & transaction history from other platforms.'),
+  $L('Pindahkan user &amp; riwayat transaksi dari platform lain (mis. Sejoli) ke Izin Hukum, lengkap dengan omzet dan akses produk.', 'Pindahkan pengguna &amp; sejarah transaksi dari platform lain ke Averion.', 'Bulk-import users & transaction history from other platforms.'),
   $h3('Cara kerja')
   . '<p class="mb-4">Halaman ' . $mono('/admin/data-import') . ' (khusus admin) memigrasikan data massal dari platform lain — saat ini <strong>Sejoli (WordPress)</strong> — via file CSV/TSV hasil ekspor. Setiap baris dicatat sebagai user + order + payment + item order, sehingga omzet &amp; riwayat transaksi lama langsung tampil di dashboard Averion. Pemberian akses produk bersifat <strong>otomatis dan opsional</strong> — tidak wajib membuat produknya dulu.</p>'
   . $h3('Kolom yang dikenali')
@@ -2546,7 +2546,7 @@ echo $section('data-import',
       ['Jalankan Import', 'Setelah pratinjau sesuai, klik <strong>Jalankan Import</strong> — data ditulis bertahap (chunked) dengan progress bar real-time.'],
   ])
   . $h3('Produk belum dibuat?')
-  . '<p class="mb-4">Transaksi dengan nama produk yang belum ada di Averion tetap dicatat (omzet ikut terhitung) memakai produk placeholder tersembunyi. Setelah kamu membuat produk aslinya, <strong>unggah &amp; jalankan file yang sama lagi</strong> — akses member diberikan secara <strong>retroaktif</strong> ke transaksi yang tadinya belum cocok.</p>'
+  . '<p class="mb-4">Transaksi dengan nama produk yang belum ada di Izin Hukum tetap dicatat (omzet ikut terhitung) memakai produk placeholder tersembunyi. Setelah kamu membuat produk aslinya, <strong>unggah &amp; jalankan file yang sama lagi</strong> — akses member diberikan secara <strong>retroaktif</strong> ke transaksi yang tadinya belum cocok.</p>'
   . $info('<strong>Senyap total:</strong> Proses import <strong>tidak mengirim</strong> notifikasi email/WhatsApp, tidak memicu komisi affiliate, social proof, atau tracking pixel — murni tulis data historis.')
   . $info('<strong>Idempoten:</strong> Import yang sama boleh dijalankan berkali-kali dengan aman — order yang sudah pernah masuk otomatis dilewati (dideteksi dari nomor order), tidak ada duplikasi.')
   . $info('<strong>Login user hasil import:</strong> Password lama dari platform sumber tidak ikut terbawa (hash tidak kompatibel) — user login via <strong>Google</strong> atau <strong>OTP WhatsApp</strong> memakai email/nomor yang sama.')
@@ -2729,12 +2729,12 @@ $intgEnvText = "# .env aplikasi tujuan\nAVERION_WEBHOOK_SECRET={$intgWhVal}\nAVE
 $intgPromptWebhook = <<<'PROMPT'
 Buatkan SATU endpoint API (webhook) di aplikasi Next.js (App Router) saya untuk
 MENGAKTIFKAN AKSES MEMBER dari sistem penjualan Averion. Saat pembelian lunas,
-Averion memanggil endpoint ini (server-ke-server) untuk memberi akses program ke
+Izin Hukum memanggil endpoint ini (server-ke-server) untuk memberi akses program ke
 user berdasarkan EMAIL + KODE PROGRAM.
 
 BUAT: route handler POST di `app/api/averion/grant-access/route.ts`.
 
-KONTRAK REQUEST (persis seperti yang dikirim Averion):
+KONTRAK REQUEST (persis seperti yang dikirim Izin Hukum):
 - Method: POST
 - Headers:
   - Content-Type: application/json
@@ -2752,7 +2752,7 @@ KONTRAK REQUEST (persis seperti yang dikirim Averion):
     "order_id": "INV-123",
     "timestamp": 1699999999
   }
-  CATATAN: saat ini Averion HANYA mengirim status:"active". Nilai "revoked" (cabut
+  CATATAN: saat ini Izin Hukum HANYA mengirim status:"active". Nilai "revoked" (cabut
   akses saat refund) BELUM dikirim — boleh siapkan strukturnya, tapi jangan diandalkan.
 
 KEAMANAN (wajib):
@@ -2776,7 +2776,7 @@ tak ditemukan 404.
 
 TAMBAHAN:
 - Log tiap request (email, program_code, order_id, hasil) untuk audit.
-- Endpoint harus live di URL yang nanti saya daftarkan di Averion (mis.
+- Endpoint harus live di URL yang nanti saya daftarkan di Izin Hukum (mis.
   https://APP-KAMU/api/averion/grant-access).
 Sesuaikan bagian "cari/buat user" & "beri akses program" dengan skema DB app saya.
 PROMPT;
@@ -2814,7 +2814,7 @@ LOGIKA:
    begitu user muncul → login + redirect ke /dashboard. Kalau tetap belum ada →
    redirect /login?email=<email>&notice=activating.
 
-CATATAN RACE (penting): Averion mengirim webhook grant-access lewat ANTREAN (bisa
+CATATAN RACE (penting): Izin Hukum mengirim webhook grant-access lewat ANTREAN (bisa
 telat beberapa detik s/d ~1 menit), sedang redirect browser tiba hampir seketika.
 Jadi route ini KEMUNGKINAN BESAR jalan SEBELUM webhook membuat akun — wajib tangani
 kasus "user belum ada" seperti langkah 4.
@@ -2828,8 +2828,8 @@ Sesuaikan "cari user" & "buat sesi login" dengan mekanisme auth app saya.
 PROMPT;
 
 $intgPromptAdminPage = <<<'PROMPT'
-Buatkan SATU halaman admin "Averion Integration" di aplikasi Next.js (App Router) saya
-untuk MENGELOLA konfigurasi integrasi Averion (webhook pesanan + auto-login) dari satu
+Buatkan SATU halaman admin "Izin Hukum Integration" di aplikasi Next.js (App Router) saya
+untuk MENGELOLA konfigurasi integrasi Izin Hukum (webhook pesanan + auto-login) dari satu
 layar Settings — menggantikan pengeditan .env manual, plus memantau diagnostik auto-login.
 
 BUAT:
@@ -2847,7 +2847,7 @@ MODEL DATA (simpan di DB — tabel `averion_integration` satu-baris atau setting
 LAYOUT (header + 2 kartu config + tombol simpan + kartu diagnostik):
 
 HEADER
-- Judul "Averion Integration" + badge status: "CONNECTED" (hijau) bila webhook_secret &
+- Judul "Izin Hukum Integration" + badge status: "CONNECTED" (hijau) bila webhook_secret &
   redirect_secret terisi, selain itu "NOT CONNECTED" (abu).
 - Subjudul: "Kelola konfigurasi integrasi webhook pesanan dan auto-login instan dari
   checkout Averion."
@@ -2855,7 +2855,7 @@ HEADER
 
 KARTU 1 — "AVERION WEBHOOK" (badge CONNECTED bila webhook_secret terisi)
 - Deskripsi: "Menerima payload event order.paid saat transaksi berhasil di Averion."
-- Field READ-ONLY "Webhook Endpoint URL (pasang di Averion Admin)" =
+- Field READ-ONLY "Webhook Endpoint URL (pasang di Izin Hukum Admin)" =
   `${APP_URL}/api/averion/grant-access`, dengan tombol Salin. Helper: "Salin endpoint ini
   ke menu Settings -> Webhooks di portal."
 - Field "Webhook Secret (HMAC-SHA256)" = input password (bertopeng) + tombol mata untuk
@@ -2867,10 +2867,10 @@ KARTU 1 — "AVERION WEBHOOK" (badge CONNECTED bila webhook_secret terisi)
 
 KARTU 2 — "AVERION AUTO LOGIN (REDIRECT JWT)" (badge CONNECTED bila redirect_secret terisi)
 - Deskripsi: "Memungkinkan pembeli langsung login otomatis ke member area setelah pembayaran
-  di Averion Checkout."
+  di Izin Hukum Checkout."
 - Field READ-ONLY "Auto Login Redirect URL" = `${APP_URL}/api/averion/login?token={token}`
   + tombol Salin. Helper: 'Tempel URL ini lengkap dengan ?token={token} ke kolom "Redirect
-  Setelah Bayar" produk di Averion. Averion mengganti {token} dengan JWT auto-login secara
+  Setelah Bayar" produk di Averion. Izin Hukum mengganti {token} dengan JWT auto-login secara
   otomatis; tanpa bagian itu pembeli tetap diminta login.'
 - Field "Redirect Secret (JWT HS256)" = input password bertopeng + tombol mata; bila tersimpan
   tampilkan "Terpasang (Terenkripsi)"; WRITE-ONLY sama seperti webhook secret.
@@ -2886,9 +2886,9 @@ KARTU "DIAGNOSTIK AUTO-LOGIN" (10 percobaan terakhir)
   PARAMETER DITERIMA (nama query-param yang benar-benar diterima, mis. `token`, atau "-") |
   PENYEBAB / HASIL (mis. "Auto-login berhasil (resolved_via: provisioned_from_signed_token,
   user_id: 18)." untuk sukses, atau "Redirect tidak menyertakan token auto-login." untuk gagal).
-- Footer: "Kolom Parameter Diterima menampilkan nama parameter yang benar-benar dikirim Averion
+- Footer: "Kolom Parameter Diterima menampilkan nama parameter yang benar-benar dikirim Izin Hukum
   pada redirect. Bila kosong atau tidak memuat token, masalahnya ada di konfigurasi redirect
-  Averion, bukan di aplikasi ini."
+  Izin Hukum, bukan di aplikasi ini."
 
 PERBARUI ROUTE /api/averion/login AGAR MENCATAT (untuk mengisi diagnostik):
 Tiap panggilan tulis 1 baris ke `averion_login_attempts`: waktu, ada/tidak token, nama param
@@ -2936,8 +2936,8 @@ echo $section('integrasi-eksternal',
   . $copyBlock('intg-prompt-webhook', 'Langkah 2 — Prompt: Endpoint Webhook (beri akses)', $intgPromptWebhook, 'max-h-80 overflow-y-auto')
   . $copyBlock('intg-prompt-login', 'Langkah 3 — Prompt: Auto-Login Setelah Bayar (opsional)', $intgPromptLogin, 'max-h-80 overflow-y-auto')
 
-  . '<p class="mb-2 mt-1 text-sm">Ingin mengelola kedua secret &amp; memantau auto-login dari <strong>satu halaman</strong> (bukan mengedit ' . $mono('.env') . ' manual)? Prompt berikut membuat halaman admin <strong>Averion Integration</strong> — dua kartu konfigurasi (Webhook + Auto-Login), tombol <em>Test Connection</em> &amp; <em>Save Configuration</em>, plus tabel <strong>Diagnostik Auto-Login</strong> yang menampilkan 10 percobaan terakhir.</p>'
-  . $copyBlock('intg-prompt-adminpage', 'Langkah 4 (opsional) — Prompt: Halaman Admin &ldquo;Averion Integration&rdquo; (kelola secret + diagnostik)', $intgPromptAdminPage, 'max-h-80 overflow-y-auto')
+  . '<p class="mb-2 mt-1 text-sm">Ingin mengelola kedua secret &amp; memantau auto-login dari <strong>satu halaman</strong> (bukan mengedit ' . $mono('.env') . ' manual)? Prompt berikut membuat halaman admin <strong>Izin Hukum Integration</strong> — dua kartu konfigurasi (Webhook + Auto-Login), tombol <em>Test Connection</em> &amp; <em>Save Configuration</em>, plus tabel <strong>Diagnostik Auto-Login</strong> yang menampilkan 10 percobaan terakhir.</p>'
+  . $copyBlock('intg-prompt-adminpage', 'Langkah 4 (opsional) — Prompt: Halaman Admin &ldquo;Izin Hukum Integration&rdquo; (kelola secret + diagnostik)', $intgPromptAdminPage, 'max-h-80 overflow-y-auto')
 
   . $h3('Langkah 5 — Daftarkan endpoint di ' . e($appName))
   . $steps([

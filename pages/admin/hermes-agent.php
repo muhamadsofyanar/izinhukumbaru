@@ -155,7 +155,7 @@ include __DIR__ . '/../../partials/head.php';
           </div>
           <div class="px-5 py-3 bg-gray-50/60 dark:bg-gray-800/30 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
             <span class="font-medium text-gray-600 dark:text-gray-300">Catatan data:</span>
-            Omzet &amp; "lunas" = order berstatus <span class="font-mono">paid</span>. Averion tidak melacak refund di status order (omzet tidak dikurangi refund). Averion tidak menyimpan belanja iklan, profit, atau atribusi iklan. Zona waktu &amp; definisi lengkap tersedia di endpoint discovery.
+            Omzet &amp; "lunas" = order berstatus <span class="font-mono">paid</span>. Izin Hukum tidak melacak refund di status order (omzet tidak dikurangi refund). Izin Hukum tidak menyimpan belanja iklan, profit, atau atribusi iklan. Zona waktu &amp; definisi lengkap tersedia di endpoint discovery.
           </div>
         </div>
 

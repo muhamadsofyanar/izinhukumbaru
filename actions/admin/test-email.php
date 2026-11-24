@@ -24,7 +24,7 @@ if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$appName = getSetting('app_name', defined('APP_NAME') ? APP_NAME : 'STIFIn Mulia');
+$appName = getSetting('app_name', defined('APP_NAME') ? APP_NAME : 'Izin Hukum');
 
 $subject = 'Test Email dari ' . $appName;
 $inner =

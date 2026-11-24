@@ -162,7 +162,7 @@ $csrf = $_SESSION['csrf_token'];
           <select name="is_active" id="wh-active" class="w-full h-9 px-3 border border-gray-200 dark:border-gray-700 rounded-lg text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-white"><option value="1">Aktif</option><option value="0">Nonaktif</option></select></div>
         <div><label class="block text-xs font-medium text-gray-500 uppercase mb-1.5">Secret <span class="normal-case text-gray-400 font-normal">(opsional — isi manual)</span></label>
           <input type="text" name="secret" id="wh-secret" placeholder="Kosongkan = dibuat otomatis" autocomplete="off" spellcheck="false" class="w-full h-9 px-3 border border-gray-200 dark:border-gray-700 rounded-lg text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono">
-          <p class="text-[11px] text-gray-400 mt-1">Isi bila mau menyamakan dengan secret yang sudah dipegang aplikasi tujuan (mis. diberi dev). Kosong = Averion buat otomatis. Min. 16 karakter, tanpa spasi.</p></div>
+          <p class="text-[11px] text-gray-400 mt-1">Isi bila mau menyamakan dengan secret yang sudah dipegang aplikasi tujuan (mis. diberi dev). Kosong = Izin Hukum buat otomatis. Min. 16 karakter, tanpa spasi.</p></div>
         <label class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300" id="wh-regen-wrap"><input type="checkbox" name="regenerate_secret" value="1" style="accent-color:var(--brand-color)"> Generate ulang secret acak (abaikan bila field Secret di atas diisi)</label>
         <p class="text-[11px] text-gray-400">Salin secret dari daftar untuk dipasang di aplikasi tujuan (dipakai memverifikasi tanda tangan HMAC). Kedua sisi WAJIB memakai secret yang sama.</p>
       </div>

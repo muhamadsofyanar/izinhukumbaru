@@ -1,7 +1,7 @@
 <?php
 // ─── Ikon PWA (di-generate GD) ────────────────────────────────────────────
 // Disajikan di /pwa-icon-<size>.png (route di index.php). Full-bleed warna brand
-// + segitiga putih (mark Averion, identik favicon fallback) → aman sebagai ikon
+// + segitiga putih (mark Izin Hukum, identik favicon fallback) → aman sebagai ikon
 // MASKABLE (OS boleh memotong tepi; mark ada di zona aman tengah). White-label:
 // warna ikut setting brand_color. bootstrap.php sudah dimuat oleh index.php.
 

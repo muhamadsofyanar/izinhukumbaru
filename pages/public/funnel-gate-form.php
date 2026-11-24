@@ -42,7 +42,7 @@ if (empty($_SESSION['fg_token'][$formId])) {
     $_SESSION['fg_token'][$formId] = bin2hex(random_bytes(16));
 }
 
-$appName    = getSetting('app_name', 'STIFIn Mulia');
+$appName    = getSetting('app_name', 'Izin Hukum');
 $appFavicon = getSetting('app_favicon', '');
 $brandColor = getSetting('brand_color', '#6366f1');
 $base       = rtrim(APP_URL, '/');
@@ -59,7 +59,7 @@ $fgBrandFooter = '<div class="fgw-powered">'
     . '<div class="fgp-copy">Copyright &copy; ' . date('Y') . '</div>'
     . '</div>';
 
-// Radius kartu/kontrol mengikuti tema Averion (kotak-tegas — design language).
+// Radius kartu/kontrol mengikuti tema Izin Hukum (kotak-tegas — design language).
 require_once __DIR__ . '/../../helpers/theme-config.php';
 $themeCfg   = function_exists('getThemeConfig') ? getThemeConfig() : [];
 $cardRadius = $themeCfg['--card-radius']    ?? '0.5rem';
@@ -242,7 +242,7 @@ $onBrand = fg_contrast($brandColor);
     .fg-btn { background: var(--fg-brand); }
     .fg-btn:hover { opacity: .92; }
 
-    /* ═══ Wizard (Multi Step) — tema TERANG, kotak-tegas (design language Averion) ═══ */
+    /* ═══ Wizard (Multi Step) — tema TERANG, kotak-tegas (design language Izin Hukum) ═══ */
     :root { --fg-on-brand: <?= e($onBrand) ?>; --fg-card-radius: <?= e($cardRadius) ?>; --fg-ctl-radius: <?= e($ctlRadius) ?>; }
     .fgw-wrap { min-height: 100vh; display: flex; align-items: flex-start; justify-content: center;
       padding: clamp(16px, 4vw, 48px) 16px;

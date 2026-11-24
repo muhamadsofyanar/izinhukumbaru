@@ -29,7 +29,7 @@ if ($ctx !== null) {
 
 // ─── Token tidak valid / kedaluwarsa / sudah dipakai ────────────
 http_response_code(410);
-$appName    = getSetting('app_name', 'STIFIn Mulia');
+$appName    = getSetting('app_name', 'Izin Hukum');
 $brandColor = getSetting('brand_color', '#6366f1');
 $loginUrl   = baseUrl('login');
 ?>

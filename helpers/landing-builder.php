@@ -603,18 +603,6 @@ function avLbRenderPage(array $page): string
     $theme  = $env['theme'];
     $blocks = $env['blocks'];
 
-    $examLanding = ($page['page_type'] ?? '') === 'product_landing'
-        && in_array($page['slug'] ?? '', ['ujian-wsl-1', 'ujian-wsl-2', 'ujian-wst-health', 'ujian-wst-learning', 'ujian-wst-tahfizh', 'beli-voucher-stifin'], true);
-    if ($examLanding) {
-        $sampleFeatures = avLbRegistry()['pricing']['defaults']['features'];
-        foreach ($blocks as &$block) {
-            if ($block['type'] === 'pricing' && ($block['cfg']['features'] ?? '') === $sampleFeatures) {
-                $block['cfg']['features'] = '';
-            }
-        }
-        unset($block);
-    }
-
     // Konteks: map produk id → {slug,name} untuk resolusi CTA.
     $ctx = ['app_url' => rtrim(APP_URL, '/'), 'products' => [], 'magnet' => null, 'csrf' => ''];
     $pids = [];

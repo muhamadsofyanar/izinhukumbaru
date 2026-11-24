@@ -1,5 +1,4 @@
 <?php
-if (!empty($isVoucher)) return;
 // ═══ BONUS KILAT — bonus produk premium GRATIS berbatas waktu ═══
 // Variables dari checkout.php:
 //   $fbOffers    (array)  daftar bonus aktif (bonus_product_id, headline, description,

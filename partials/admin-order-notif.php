@@ -1,6 +1,6 @@
 <?php
 /**
- * Averion — Notifikasi Order Masuk (Admin) — partial reusable (SP-05)
+ * Izin Hukum — Notifikasi Order Masuk (Admin) — partial reusable (SP-05)
  * ----------------------------------------------------------------------------
  * Popup + suara persisten saat ada order baru. Muncul di SEMUA halaman admin
  * (di-include dari partials/sidebar-admin.php yang dimuat setiap halaman admin),

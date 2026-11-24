@@ -784,7 +784,7 @@ function copyWa(btn, num) {
             <span class="text-sm text-gray-600 dark:text-gray-300">Senyapkan notifikasi <span class="text-gray-400 font-normal">(jangan kirim WA &amp; email — termasuk info akun bila Member Baru)</span></span>
           </label>
 
-          <!-- Terbitkan lisensi vendor (hanya produk Averion berlisensi di install vendor).
+          <!-- Terbitkan lisensi vendor (hanya produk Izin Hukum berlisensi di install vendor).
                Default cerdas: penjualan asli (tak di-mute) → nyala; migrasi (di-mute) → mati. -->
           <label id="mtVendorLicRow" class="hidden items-start gap-2.5 cursor-pointer select-none">
             <input type="checkbox" name="issue_vendor_license" id="mtVendorLic" value="1"

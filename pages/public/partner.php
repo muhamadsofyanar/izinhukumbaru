@@ -61,7 +61,7 @@ if (!$affiliate) {
     redirect('/products');
 }
 
-$appName    = getSetting('app_name', 'STIFIn Mulia');
+$appName    = getSetting('app_name', 'Izin Hukum');
 $appLogo    = getSetting('app_logo', '');
 $brandGrad  = 'background: var(--brand-color);';
 $memberName = trim((string) ($affiliate['member_name'] ?? ''));

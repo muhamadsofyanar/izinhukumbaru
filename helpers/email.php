@@ -28,7 +28,7 @@ function emailLayout(string $title, string $innerHtml, string $variant = 'succes
 {
     // Perataan isi hero (ikon + judul tetap di tengah; hanya body yang ikut $align).
     $align = in_array($align, ['left', 'center', 'right'], true) ? $align : 'center';
-    $app   = getSetting('app_name', 'STIFIn Mulia');
+    $app   = getSetting('app_name', 'Izin Hukum');
     $brand = getSetting('brand_color', '#10b981');
     // Validasi brand color (cegah nilai aneh masuk ke style). Fallback ke default.
     if (!preg_match('/^#[0-9a-fA-F]{6}$/', (string) $brand)) {
@@ -199,7 +199,7 @@ function formatChangelogHtml(string $raw, string $accent = '#10b981'): string
 function renderPlaceholders(string $template, array $data, string $channel = 'email'): string
 {
     $data = array_merge([
-        'app_name'    => getSetting('app_name', 'STIFIn Mulia'),
+        'app_name'    => getSetting('app_name', 'Izin Hukum'),
         'brand_color' => getSetting('brand_color', '#6366f1'),
         'app_url'     => baseUrl(),
     ], $data);

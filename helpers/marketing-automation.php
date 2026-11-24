@@ -125,7 +125,7 @@ function processAbandonedCarts(int $limit = 30): array
                                    WHERE id = ? AND status='pending'");
         $aclIns   = $pdo->prepare("INSERT INTO abandoned_cart_logs (order_id, user_id, channel, provider, recipient, status, response) VALUES (?, ?, ?, ?, ?, ?, ?)");
         $nlIns    = $pdo->prepare("INSERT INTO notification_logs (event_key, channel, provider, recipient, status, response, created_at) VALUES ('abandoned_cart', ?, ?, ?, ?, ?, NOW())");
-        $appName  = getSetting('app_name', 'STIFIn Mulia');
+        $appName  = getSetting('app_name', 'Izin Hukum');
 
         foreach ($orders as $o) {
             $recipient = $channel === 'whatsapp' ? ($o['user_phone'] ?? '') : $o['user_email'];
@@ -322,7 +322,7 @@ function processDueSequenceSends(int $limit = 20): array
             "INSERT INTO notification_logs (event_key, channel, provider, recipient, status, response, created_at)
              VALUES ('email_sequence', 'email', ?, ?, ?, ?, NOW())"
         );
-        $appName = getSetting('app_name', 'STIFIn Mulia');
+        $appName = getSetting('app_name', 'Izin Hukum');
 
         foreach ($rows as $r) {
             $result['processed']++;

@@ -15,7 +15,7 @@ try {
 
 if (!$cert) { http_response_code(404); exit('Sertifikat tidak ditemukan.'); }
 
-$appName    = getSetting('app_name', 'STIFIn Mulia');
+$appName    = getSetting('app_name', 'Izin Hukum');
 $bg         = getSetting('certificate_bg_color', '#1e1b4b');
 $accent     = getSetting('certificate_accent_color', '#6366f1');
 $sigName    = getSetting('certificate_signatory_name', '');

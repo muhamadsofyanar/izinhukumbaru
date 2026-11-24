@@ -65,7 +65,7 @@ if ($otpProvider === 'kirimdev' && getSetting('kirimdev_otp_method', 'text') ===
     if (trim($tpl) === '' || !str_contains($tpl, '{code}')) $tpl = $tplDefault;
     $message = strtr($tpl, [
         '{code}'     => $code,
-        '{app_name}' => getSetting('app_name', 'STIFIn Mulia'),
+        '{app_name}' => getSetting('app_name', 'Izin Hukum'),
         '{minutes}'  => '10',
     ]);
     $sendResult = $adapter->send($phone, '', $message);

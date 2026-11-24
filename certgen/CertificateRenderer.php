@@ -22,7 +22,7 @@ class CertificateRenderer
             imagerectangle($img, 20, 20, $w - 20, $h - 20, $accent);      // border
             imagerectangle($img, 23, 23, $w - 23, $h - 23, $accent);
 
-            $appName = (string) getSetting('app_name', 'STIFIn Mulia');
+            $appName = (string) getSetting('app_name', 'Izin Hukum');
             self::centerText($img, 5, $w, 70,  strtoupper($appName), $accent);
             self::centerText($img, 5, $w, 150, 'SERTIFIKAT PENYELESAIAN', $white);
             self::centerText($img, 3, $w, 250, 'Diberikan kepada:', $grey);

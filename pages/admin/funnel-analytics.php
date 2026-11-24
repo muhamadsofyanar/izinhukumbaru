@@ -295,7 +295,7 @@ $lpBadgeStyle = $isExternalLP
     ? 'background:rgba(107,114,128,.12);color:#6b7280'
     : 'background:color-mix(in srgb, var(--brand-color) 12%, transparent);color:var(--brand-color)';
 
-$pageTitle = 'Funnel Analytics — ' . getSetting('app_name', 'STIFIn Mulia');
+$pageTitle = 'Funnel Analytics — ' . getSetting('app_name', 'Izin Hukum');
 ?>
 <?php include __DIR__ . '/../../partials/head.php'; ?>
 <body class="bg-gray-50 dark:bg-gray-950 antialiased">

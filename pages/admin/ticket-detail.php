@@ -107,7 +107,7 @@ $meta        = ticketStatusMeta($ticket['status']);
 $isClosed    = $ticket['status'] === 'closed';
 $pageTitle   = 'Tiket ' . $ticket['ticket_number'];
 $topbarTitle = 'Tiket Support';
-$appName     = getSetting('app_name', 'STIFIn Mulia');
+$appName     = getSetting('app_name', 'Izin Hukum');
 ?>
 <?php include __DIR__ . '/../../partials/head.php'; ?>
 <body class="bg-gray-50 dark:bg-gray-950 antialiased">

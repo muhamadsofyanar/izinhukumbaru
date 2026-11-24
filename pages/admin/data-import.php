@@ -108,7 +108,7 @@ foreach ($cleanupGroups as $cg) { $cleanupOmzet += $cg['omzet']; }
             <div>
               <h2 class="text-xl font-bold text-gray-900 dark:text-white">Import / Migrasi Data</h2>
               <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5 max-w-xl">
-                Pindahkan user &amp; riwayat transaksi dari platform lain ke Averion, lengkap dengan omzet dan akses produk.
+                Pindahkan user &amp; riwayat transaksi dari platform lain ke Izin Hukum, lengkap dengan omzet dan akses produk.
               </p>
             </div>
           </div>

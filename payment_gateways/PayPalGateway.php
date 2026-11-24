@@ -126,7 +126,7 @@ class PayPalGateway {
 
         $orderNumber = (string) ($orderData['order_number'] ?? '');
         $base = rtrim(APP_URL, '/');
-        $brand = getSetting('app_name', 'STIFIn Mulia');
+        $brand = getSetting('app_name', 'Izin Hukum');
 
         $payload = [
             'intent' => 'CAPTURE',

@@ -99,14 +99,6 @@ $routes = [
     '#^/penawaran$#'                               => ['pages/user/offers.php',            []], // Penawaran upsell bertarget di dashboard member
     '#^/transactions/([A-Za-z0-9_-]+)$#'          => ['pages/user/transaction-detail.php', ['order_number' => 1]],
     '#^/member$#'                                  => ['pages/user/member-area.php',        []],
-    '#^/member/voucher-tes$#'                       => ['pages/user/stifin-vouchers.php',     []],
-    '#^/admin/promotor-cabang$#'                   => ['pages/admin/stifin-promoters.php',   []],
-    '#^/admin/kantor-cabang$#'                     => ['pages/admin/stifin-office.php',      []],
-    '#^/admin/peserta-tes$#'                       => ['pages/admin/stifin-participants.php', []],
-    '#^/admin/data-resmi-cabang$#'                 => ['pages/admin/stifin-official-reports.php', []],
-    '#^/admin/laporan-cabang$#'                    => ['pages/admin/stifin-reports.php', []],
-    '#^/member/stifin-saya$#'                      => ['pages/user/stifin-office.php', []],
-    '#^/admin/voucher-tes$#'                        => ['pages/admin/stifin-vouchers.php',    []],
     '#^/member/my-licenses$#'                      => ['pages/user/my-licenses.php',        []],
     '#^/agency-seo$#'                              => ['pages/user/agency-seo.php',         []], // Portal Agency SEO (vendor-only)
     '#^/member/lm/([0-9]+)/material/([0-9]+)$#'   => ['pages/user/material-view.php',      ['lead_magnet_id' => 1, 'material_id' => 2]],
@@ -159,8 +151,6 @@ $routes = [
     '#^/admin/flash-bonus$#'                       => ['pages/admin/flash-bonus.php',         []],
     '#^/admin/upsells$#'                           => ['pages/admin/upsells.php',             []],
     '#^/admin/content$#'                           => ['pages/admin/content.php',             []],
-    '#^/admin/kajian$#' => ['pages/admin/kajian.php', []],
-    '#^/kajian$#' => ['pages/user/kajian.php', []],
     // Preview konten (admin/staff): render template member asli, read-only.
     '#^/admin/content/(preview)/lm/([0-9]+)/material/([0-9]+)$#' => ['pages/user/material-view.php', ['preview' => 1, 'lead_magnet_id' => 2, 'material_id' => 3]],
     '#^/admin/content/(preview)/lm/([0-9]+)$#'                   => ['pages/user/class-detail.php',  ['preview' => 1, 'lead_magnet_id' => 2]],

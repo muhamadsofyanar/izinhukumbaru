@@ -1,4 +1,4 @@
-# Update satu klik STIFIn Mulia
+# Update satu klik Izin Hukum
 
 Paket pertama diunggah manual ke root repo `muhamadsofyanar/darmutiarakajian`. Pertahankan posisi folder setiap file. Compose dalam paket ditujukan untuk resource Git berbasis Docker Compose pada Coolify, dengan proxy menuju service `app` pada port internal 80.
 

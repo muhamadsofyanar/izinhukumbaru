@@ -132,10 +132,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             @ini_set('memory_limit', '256M');
 
-            $sqlFile = dirname(__DIR__, 2) . '/stifin-install.sql';
+            $sqlFile = dirname(__DIR__, 2) . '/izinhukum-install.sql';
 
             if (!file_exists($sqlFile)) {
-                $error = 'File stifin-install.sql tidak ditemukan di folder utama aplikasi. '
+                $error = 'File izinhukum-install.sql tidak ditemukan di folder utama aplikasi. '
                        . 'Pastikan file tersebut sudah di-upload ke server.';
             } else {
                 try {
@@ -342,7 +342,7 @@ include __DIR__ . '/../partials/installer-head.php';
     <p class="text-xs text-green-700 mt-1">
       <?= $stmtOk ?> statement dieksekusi
       <?= $stmtSkipped > 0 ? ", {$stmtSkipped} dilewati (objek sudah ada, aman)" : '' ?>
-      dari <?= $stmtTotal ?> statement dalam <code class="font-mono">stifin-install.sql</code>.
+      dari <?= $stmtTotal ?> statement dalam <code class="font-mono">izinhukum-install.sql</code>.
     </p>
   </div>
 </div>
@@ -437,7 +437,7 @@ include __DIR__ . '/../partials/installer-head.php';
     <label class="block text-sm font-medium text-gray-700 mb-1.5">Nama Database</label>
     <input type="text" name="db_name"
            value="<?= e($_POST['db_name'] ?? '') ?>"
-           placeholder="namaakun_stifin" required
+           placeholder="namaakun_izinhukum" required
            class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl text-sm focus:ring-2 focus:ring-brand focus:bg-white outline-none transition">
   </div>
 
@@ -458,7 +458,7 @@ include __DIR__ . '/../partials/installer-head.php';
 
   <div class="bg-blue-50 border border-blue-100 rounded-xl px-4 py-3 text-xs text-blue-700">
     <p class="font-semibold mb-0.5">Yang akan diimport:</p>
-    <p class="text-blue-600 font-mono">stifin-install.sql</p>
+    <p class="text-blue-600 font-mono">izinhukum-install.sql</p>
     <p class="text-blue-500 mt-1">File SQL lengkap yang berisi seluruh skema dan data aplikasi.</p>
   </div>
 

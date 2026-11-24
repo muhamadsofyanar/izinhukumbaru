@@ -15,7 +15,7 @@ if (getSetting('support_page_enabled', '0') !== '1') {
     return;
 }
 
-$appName    = getSetting('app_name', 'STIFIn Mulia');
+$appName    = getSetting('app_name', 'Izin Hukum');
 $appLogo    = getSetting('app_logo', '');
 $bio        = trim((string) getSetting('support_bio', ''));
 $badgeText  = trim((string) getSetting('support_badge_text', 'Halaman Dukungan'));

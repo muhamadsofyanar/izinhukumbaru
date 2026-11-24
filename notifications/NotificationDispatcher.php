@@ -39,7 +39,7 @@ class NotificationDispatcher {
             // {{app_name}}, {{brand_color}}, {{app_url}} tanpa harus dikirim manual
             // tiap pemanggilan. Data spesifik event tetap menang (override global).
             $globalData = [
-                'app_name'    => getSetting('app_name', 'STIFIn Mulia'),
+                'app_name'    => getSetting('app_name', 'Izin Hukum'),
                 'brand_color' => getSetting('brand_color', '#6366f1'),
                 'app_url'     => rtrim((string) (defined('APP_URL') ? APP_URL : getSetting('app_url', '')), '/'),
             ];

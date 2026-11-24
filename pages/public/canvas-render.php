@@ -1,6 +1,6 @@
 <?php
 // ════════════════════════════════════════════════════════════════
-// Averion — Canvas Renderer
+// Izin Hukum — Canvas Renderer
 // PENTING: file ini TIDAK meng-include partial apapun. Ia meng-echo
 // raw HTML lalu exit. Dipanggil dari index.php (routing Canvas).
 //

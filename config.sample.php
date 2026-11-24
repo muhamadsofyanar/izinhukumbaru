@@ -67,7 +67,7 @@ if ($appUrlOverride !== '') {
     $base = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '')), '/');
     define('APP_URL', $scheme . '://' . $host . $base);
 }
-define('APP_NAME', 'STIFIn Mulia');
+define('APP_NAME', 'Izin Hukum');
 define('UPDATE_BACKUP_PATH', dirname(__DIR__) . '/backups/');
 define('UPDATE_TEMP_PATH',   __DIR__ . '/storage/update-tmp/');
 

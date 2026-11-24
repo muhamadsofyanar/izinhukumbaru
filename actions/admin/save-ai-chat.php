@@ -85,7 +85,7 @@ $values['ai_chat_api_key'] = trim($_POST['ai_chat_api_key'] ?? '');
 $values['ai_chat_bot_name']        = mb_substr(trim(strip_tags($_POST['ai_chat_bot_name'] ?? '')), 0, 30);
 $values['ai_chat_welcome_message'] = mb_substr(trim(strip_tags($_POST['ai_chat_welcome_message'] ?? '')), 0, 200);
 // System prompt: batas sangat longgar (20.000 char) — cukup untuk instruksi panjang.
-// Kolom settings.setting_value = MEDIUMTEXT (lihat stifin-install.sql / migrations/update-*.sql).
+// Kolom settings.setting_value = MEDIUMTEXT (lihat izinhukum-install.sql / migrations/update-*.sql).
 $values['ai_chat_system_prompt']   = mb_substr(trim(strip_tags($_POST['ai_chat_system_prompt'] ?? '')), 0, 20000);
 // FAQ & kebijakan toko: pengetahuan AI di luar produk (buildAiSalesContext).
 $values['ai_chat_faq']             = mb_substr(trim(strip_tags($_POST['ai_chat_faq'] ?? '')), 0, 8000);
